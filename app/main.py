@@ -10,12 +10,13 @@ A competitive programming practice system that:
 Run with: uvicorn app.main:app --reload
 """
 
-from fastapi import FastAPI
-from fastapi.middleware.cors import CORSMiddleware
 from contextlib import asynccontextmanager
 
-from .database import init_db
-from .routers import users, contests, reflections
+from fastapi import FastAPI
+from fastapi.middleware.cors import CORSMiddleware
+
+from .database import DATABASE_URL, get_database_type, init_db
+from .routers import contests, reflections, users
 from .services.problem_service import get_problem_service
 
 
@@ -102,35 +103,84 @@ def read_root():
         "endpoints": {
             "users": "/users",
             "contests": "/contests",
-        }
+        },
     }
 
 
 @app.get("/health", tags=["health"])
 def health_check():
     """Health check endpoint."""
-    return {"status": "healthy"}
+    return {"status": "healthy", "database": get_database_type()}
+
+
+@app.get("/database-info", tags=["health"])
+def database_info():
+    """Get information about the current database connection."""
+    from sqlalchemy import text
+
+    from .database import SessionLocal, engine
+
+    db_type = get_database_type()
+    is_postgresql = "postgresql" in DATABASE_URL or "postgres" in DATABASE_URL
+
+    # Test connection and get some info
+    info = {
+        "database_type": db_type,
+        "is_postgresql": is_postgresql,
+        "is_neon": is_postgresql and "neon" in DATABASE_URL,
+        "connection_status": "unknown",
+        "tables": [],
+    }
+
+    try:
+        db = SessionLocal()
+        # Test query
+        db.execute(text("SELECT 1"))
+        info["connection_status"] = "connected"
+
+        # Get table names
+        if is_postgresql:
+            result = db.execute(
+                text(
+                    "SELECT table_name FROM information_schema.tables "
+                    "WHERE table_schema = 'public'"
+                )
+            )
+            info["tables"] = [row[0] for row in result.fetchall()]
+        else:
+            result = db.execute(
+                text("SELECT name FROM sqlite_master WHERE type='table'")
+            )
+            info["tables"] = [row[0] for row in result.fetchall()]
+
+        db.close()
+    except Exception as e:
+        info["connection_status"] = f"error: {str(e)}"
+
+    return info
 
 
 @app.get("/stats", tags=["stats"])
 def get_system_stats():
     """Get system statistics."""
     from .database import SessionLocal
-    from .models import User, Contest, ContestStatus
+    from .models import Contest, ContestStatus, User
 
     db = SessionLocal()
     try:
         total_users = db.query(User).count()
         total_contests = db.query(Contest).count()
-        active_contests = db.query(Contest).filter(
-            Contest.status == ContestStatus.ACTIVE
-        ).count()
-        completed_contests = db.query(Contest).filter(
-            Contest.status == ContestStatus.COMPLETED
-        ).count()
+        active_contests = (
+            db.query(Contest).filter(Contest.status == ContestStatus.ACTIVE).count()
+        )
+        completed_contests = (
+            db.query(Contest).filter(Contest.status == ContestStatus.COMPLETED).count()
+        )
 
         problem_service = get_problem_service()
-        total_problems = len(problem_service._problems) if problem_service._loaded else 0
+        total_problems = (
+            len(problem_service._problems) if problem_service._loaded else 0
+        )
 
         return {
             "total_users": total_users,

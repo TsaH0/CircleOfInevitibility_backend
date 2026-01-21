@@ -1,21 +1,43 @@
 """
 SQLAlchemy database models for the contest system.
+Supports both SQLite and PostgreSQL (Neon).
 """
 
+import enum
+import os
+from datetime import datetime
+
+from dotenv import load_dotenv
 from sqlalchemy import (
-    Column, Integer, String, Float, Boolean, DateTime, ForeignKey,
-    Text, JSON, Enum as SQLEnum, UniqueConstraint, Index
+    JSON,
+    Boolean,
+    Column,
+    DateTime,
+    Float,
+    ForeignKey,
+    Index,
+    Integer,
+    String,
+    Text,
+    UniqueConstraint,
 )
+from sqlalchemy import Enum as SQLEnum
 from sqlalchemy.orm import relationship
 from sqlalchemy.sql import func
-from datetime import datetime
-import enum
 
 from .database import Base
+
+# Load environment variables and determine database type
+load_dotenv()
+_DATABASE_URL = os.getenv("DATABASE_URL", "sqlite:///./mastercp.db")
+
+# Determine if we're using PostgreSQL for native enum support
+IS_POSTGRESQL = "postgresql" in _DATABASE_URL or "postgres" in _DATABASE_URL
 
 
 class ContestStatus(enum.Enum):
     """Contest status enum."""
+
     ACTIVE = "active"
     COMPLETED = "completed"
     ABANDONED = "abandoned"
@@ -23,6 +45,7 @@ class ContestStatus(enum.Enum):
 
 class SubmissionStatus(enum.Enum):
     """Submission status enum."""
+
     PENDING = "pending"
     SOLVED = "solved"
     FAILED = "failed"
@@ -31,6 +54,7 @@ class SubmissionStatus(enum.Enum):
 
 class User(Base):
     """User model with overall rating."""
+
     __tablename__ = "users"
 
     id = Column(Integer, primary_key=True, index=True)
@@ -50,17 +74,26 @@ class User(Base):
     updated_at = Column(DateTime, default=func.now(), onupdate=func.now())
 
     # Relationships
-    topic_ratings = relationship("UserTopicRating", back_populates="user", cascade="all, delete-orphan")
-    weak_topics = relationship("WeakTopic", back_populates="user", cascade="all, delete-orphan")
-    contests = relationship("Contest", back_populates="user", cascade="all, delete-orphan")
+    topic_ratings = relationship(
+        "UserTopicRating", back_populates="user", cascade="all, delete-orphan"
+    )
+    weak_topics = relationship(
+        "WeakTopic", back_populates="user", cascade="all, delete-orphan"
+    )
+    contests = relationship(
+        "Contest", back_populates="user", cascade="all, delete-orphan"
+    )
 
 
 class UserTopicRating(Base):
     """Per-topic rating for a user."""
+
     __tablename__ = "user_topic_ratings"
 
     id = Column(Integer, primary_key=True, index=True)
-    user_id = Column(Integer, ForeignKey("users.id", ondelete="CASCADE"), nullable=False)
+    user_id = Column(
+        Integer, ForeignKey("users.id", ondelete="CASCADE"), nullable=False
+    )
 
     # Topic identifier (e.g., "dp_general", "graph_traversal")
     topic = Column(String(100), nullable=False, index=True)
@@ -86,10 +119,13 @@ class UserTopicRating(Base):
 
 class WeakTopic(Base):
     """Tracks weak topics that need reinforcement."""
+
     __tablename__ = "weak_topics"
 
     id = Column(Integer, primary_key=True, index=True)
-    user_id = Column(Integer, ForeignKey("users.id", ondelete="CASCADE"), nullable=False)
+    user_id = Column(
+        Integer, ForeignKey("users.id", ondelete="CASCADE"), nullable=False
+    )
 
     # Topic identifier
     topic = Column(String(100), nullable=False, index=True)
@@ -117,20 +153,29 @@ class WeakTopic(Base):
     user = relationship("User", back_populates="weak_topics")
 
     __table_args__ = (
-        UniqueConstraint("user_id", "topic", "is_active", name="unique_active_weak_topic"),
+        UniqueConstraint(
+            "user_id", "topic", "is_active", name="unique_active_weak_topic"
+        ),
         Index("idx_user_weak_topic", "user_id", "is_active"),
     )
 
 
 class Contest(Base):
     """A practice contest for a user."""
+
     __tablename__ = "contests"
 
     id = Column(Integer, primary_key=True, index=True)
-    user_id = Column(Integer, ForeignKey("users.id", ondelete="CASCADE"), nullable=False)
+    user_id = Column(
+        Integer, ForeignKey("users.id", ondelete="CASCADE"), nullable=False
+    )
 
     # Contest metadata
-    status = Column(SQLEnum(ContestStatus), default=ContestStatus.ACTIVE, nullable=False)
+    status = Column(
+        SQLEnum(ContestStatus, native_enum=IS_POSTGRESQL, create_constraint=True),
+        default=ContestStatus.ACTIVE,
+        nullable=False,
+    )
 
     # Rating snapshot at contest start
     rating_at_start = Column(Integer, nullable=False)
@@ -151,15 +196,20 @@ class Contest(Base):
 
     # Relationships
     user = relationship("User", back_populates="contests")
-    problems = relationship("ContestProblem", back_populates="contest", cascade="all, delete-orphan")
+    problems = relationship(
+        "ContestProblem", back_populates="contest", cascade="all, delete-orphan"
+    )
 
 
 class ContestProblem(Base):
     """A problem assigned to a contest."""
+
     __tablename__ = "contest_problems"
 
     id = Column(Integer, primary_key=True, index=True)
-    contest_id = Column(Integer, ForeignKey("contests.id", ondelete="CASCADE"), nullable=False)
+    contest_id = Column(
+        Integer, ForeignKey("contests.id", ondelete="CASCADE"), nullable=False
+    )
 
     # Problem reference (from standardized_problems.json)
     problem_id = Column(String(100), nullable=False, index=True)
@@ -175,7 +225,11 @@ class ContestProblem(Base):
     is_weak_topic_problem = Column(Boolean, default=False)
 
     # Submission status
-    status = Column(SQLEnum(SubmissionStatus), default=SubmissionStatus.PENDING, nullable=False)
+    status = Column(
+        SQLEnum(SubmissionStatus, native_enum=IS_POSTGRESQL, create_constraint=True),
+        default=SubmissionStatus.PENDING,
+        nullable=False,
+    )
 
     # Timing
     started_at = Column(DateTime, nullable=True)  # When user first viewed
@@ -187,19 +241,25 @@ class ContestProblem(Base):
 
     # Relationships
     contest = relationship("Contest", back_populates="problems")
-    reflection = relationship("ProblemReflection", back_populates="contest_problem", uselist=False, cascade="all, delete-orphan")
-
-    __table_args__ = (
-        Index("idx_contest_problem", "contest_id", "problem_id"),
+    reflection = relationship(
+        "ProblemReflection",
+        back_populates="contest_problem",
+        uselist=False,
+        cascade="all, delete-orphan",
     )
+
+    __table_args__ = (Index("idx_contest_problem", "contest_id", "problem_id"),)
 
 
 class ProblemHistory(Base):
     """Tracks all problems a user has attempted (for deduplication)."""
+
     __tablename__ = "problem_history"
 
     id = Column(Integer, primary_key=True, index=True)
-    user_id = Column(Integer, ForeignKey("users.id", ondelete="CASCADE"), nullable=False)
+    user_id = Column(
+        Integer, ForeignKey("users.id", ondelete="CASCADE"), nullable=False
+    )
     problem_id = Column(String(100), nullable=False, index=True)
 
     # Last attempt info
@@ -216,10 +276,16 @@ class ProblemHistory(Base):
 
 class ProblemReflection(Base):
     """AI-generated reflection for a contest problem (Divine Rite of Reflection)."""
+
     __tablename__ = "problem_reflections"
 
     id = Column(Integer, primary_key=True, index=True)
-    contest_problem_id = Column(Integer, ForeignKey("contest_problems.id", ondelete="CASCADE"), nullable=False, unique=True)
+    contest_problem_id = Column(
+        Integer,
+        ForeignKey("contest_problems.id", ondelete="CASCADE"),
+        nullable=False,
+        unique=True,
+    )
 
     # User-provided editorial (can be text or URL)
     editorial_text = Column(Text, nullable=True)
@@ -228,8 +294,12 @@ class ProblemReflection(Base):
     # AI-generated reflection content
     pivot_sentence = Column(Text, nullable=True)  # The key insight of the problem
     tips = Column(Text, nullable=True)  # Tips for similar problems
-    what_to_improve = Column(Text, nullable=True)  # What could have been done differently
-    master_approach = Column(Text, nullable=True)  # How "The Circle of Inevitability" would approach
+    what_to_improve = Column(
+        Text, nullable=True
+    )  # What could have been done differently
+    master_approach = Column(
+        Text, nullable=True
+    )  # How "The Circle of Inevitability" would approach
 
     # Full response stored as text for future reference
     full_response = Column(Text, nullable=True)
@@ -242,6 +312,4 @@ class ProblemReflection(Base):
     # Relationship
     contest_problem = relationship("ContestProblem", back_populates="reflection")
 
-    __table_args__ = (
-        Index("idx_reflection_contest_problem", "contest_problem_id"),
-    )
+    __table_args__ = (Index("idx_reflection_contest_problem", "contest_problem_id"),)
