@@ -1,0 +1,27 @@
+# MasterCP Backend Requirements
+
+# Web Framework
+fastapi>=0.100.0
+uvicorn[standard]>=0.22.0
+
+# Database
+sqlalchemy>=2.0.0
+
+# Validation
+pydantic>=2.0.0
+
+# HTTP Client (for fetching problems)
+requests>=2.28.0
+
+# Async HTTP Client (for OpenRouter API)
+httpx>=0.25.0
+
+# Environment Variables
+python-dotenv>=1.0.0
+
+# HTML Parsing (for editorial fetcher)
+beautifulsoup4>=4.12.0
+
+# Development
+python-multipart>=0.0.6
+

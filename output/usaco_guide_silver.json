@@ -1,0 +1,3061 @@
+{
+  "division": "silver",
+  "modules": [
+    {
+      "module_id": "prefix-sums",
+      "module_name": "Prefix Sums",
+      "problems": [
+        {
+          "uniqueId": "ys-StaticRangeSum",
+          "name": "Static Range Sum",
+          "url": "https://judge.yosupo.jp/problem/static_range_sum",
+          "source": "YS",
+          "difficulty": "Very Easy",
+          "isStarred": false,
+          "tags": [],
+          "category": "sample"
+        },
+        {
+          "uniqueId": "usaco-572",
+          "name": "Breed Counting",
+          "url": "http://www.usaco.org/index.php?page=viewproblem2&cpid=572",
+          "source": "Silver",
+          "difficulty": "Very Easy",
+          "isStarred": false,
+          "tags": [
+            "Prefix Sums"
+          ],
+          "category": "general"
+        },
+        {
+          "uniqueId": "usaco-595",
+          "name": "Subsequences Summing to Sevens",
+          "url": "http://www.usaco.org/index.php?page=viewproblem2&cpid=595",
+          "source": "Silver",
+          "difficulty": "Easy",
+          "isStarred": true,
+          "tags": [
+            "Prefix Sums"
+          ],
+          "category": "general"
+        },
+        {
+          "uniqueId": "usaco-691",
+          "name": "Hoof Paper Scissors",
+          "url": "http://www.usaco.org/index.php?page=viewproblem2&cpid=691",
+          "source": "Silver",
+          "difficulty": "Easy",
+          "isStarred": false,
+          "tags": [
+            "Prefix Sums"
+          ],
+          "category": "general"
+        },
+        {
+          "uniqueId": "cses-1661",
+          "name": "Subarray Sums II",
+          "url": "https://cses.fi/problemset/task/1661",
+          "source": "CSES",
+          "difficulty": "Easy",
+          "isStarred": false,
+          "tags": [
+            "Prefix Sums"
+          ],
+          "category": "general"
+        },
+        {
+          "uniqueId": "cses-1662",
+          "name": "Subarray Divisibility",
+          "url": "https://cses.fi/problemset/task/1662",
+          "source": "CSES",
+          "difficulty": "Easy",
+          "isStarred": false,
+          "tags": [
+            "Prefix Sums"
+          ],
+          "category": "general"
+        },
+        {
+          "uniqueId": "usaco-715",
+          "name": "Why Did the Cow Cross the Road II",
+          "url": "http://www.usaco.org/index.php?page=viewproblem2&cpid=715",
+          "source": "Silver",
+          "difficulty": "Easy",
+          "isStarred": false,
+          "tags": [
+            "Prefix Sums"
+          ],
+          "category": "general"
+        },
+        {
+          "uniqueId": "cf-1398C",
+          "name": "Good Subarrays",
+          "url": "https://codeforces.com/contest/1398/problem/C",
+          "source": "CF",
+          "difficulty": "Normal",
+          "isStarred": false,
+          "tags": [
+            "Prefix Sums",
+            "Math"
+          ],
+          "category": "general"
+        },
+        {
+          "uniqueId": "ac-GCDOnBlackboard",
+          "name": "GCD on Blackboard",
+          "url": "https://atcoder.jp/contests/abc125/tasks/abc125_c",
+          "source": "AC",
+          "difficulty": "Normal",
+          "isStarred": false,
+          "tags": [
+            "Prefix Sums"
+          ],
+          "category": "general"
+        },
+        {
+          "uniqueId": "cf-1826D",
+          "name": "Running Miles",
+          "url": "https://codeforces.com/contest/1826/problem/D",
+          "source": "CF",
+          "difficulty": "Normal",
+          "isStarred": true,
+          "tags": [
+            "Prefix Sums"
+          ],
+          "category": "general"
+        },
+        {
+          "uniqueId": "cf-1291D",
+          "name": "Irreducible Anagrams",
+          "url": "https://codeforces.com/contest/1291/problem/D",
+          "source": "CF",
+          "difficulty": "Normal",
+          "isStarred": false,
+          "tags": [
+            "Prefix Sums"
+          ],
+          "category": "general"
+        },
+        {
+          "uniqueId": "usaco-1471",
+          "name": "Farmer John's Favorite Operation",
+          "url": "https://usaco.org/index.php?page=viewproblem2&cpid=1471",
+          "source": "Silver",
+          "difficulty": "Normal",
+          "isStarred": true,
+          "tags": [
+            "Prefix Sums"
+          ],
+          "category": "general"
+        },
+        {
+          "uniqueId": "ac-MultipleOf2019",
+          "name": "Multiple of 2019",
+          "url": "https://atcoder.jp/contests/abc164/tasks/abc164_d",
+          "source": "AC",
+          "difficulty": "Hard",
+          "isStarred": false,
+          "tags": [
+            "Prefix Sums"
+          ],
+          "category": "general"
+        }
+      ]
+    },
+    {
+      "module_id": "more-prefix-sums",
+      "module_name": "More Prefix Sums",
+      "problems": [
+        {
+          "uniqueId": "cses-1643",
+          "name": "Max Subarray Sum",
+          "url": "https://cses.fi/problemset/task/1643",
+          "source": "CSES",
+          "difficulty": "Easy",
+          "isStarred": false,
+          "tags": [
+            "Prefix Sums"
+          ],
+          "category": "maxsum"
+        },
+        {
+          "uniqueId": "cses-1652",
+          "name": "Forest Queries",
+          "url": "https://cses.fi/problemset/task/1652",
+          "source": "CSES",
+          "difficulty": "Easy",
+          "isStarred": false,
+          "tags": [
+            "2D Prefix Sums"
+          ],
+          "category": "sample2"
+        },
+        {
+          "uniqueId": "cf-295A",
+          "name": "Greg and Array",
+          "url": "https://codeforces.com/contest/295/problem/A",
+          "source": "CF",
+          "difficulty": "Normal",
+          "isStarred": false,
+          "tags": [
+            "Difference Array"
+          ],
+          "category": "sample3"
+        },
+        {
+          "uniqueId": "cf-816B",
+          "name": "Karen and Coffee",
+          "url": "https://codeforces.com/contest/816/problem/B",
+          "source": "CF",
+          "difficulty": "Easy",
+          "isStarred": false,
+          "tags": [
+            "Difference Array"
+          ],
+          "category": "difference-arrays-problemset"
+        },
+        {
+          "uniqueId": "cf-276C",
+          "name": "Little Girl and Maximum Sum",
+          "url": "https://codeforces.com/contest/276/problem/C",
+          "source": "CF",
+          "difficulty": "Normal",
+          "isStarred": false,
+          "tags": [
+            "Difference Array"
+          ],
+          "category": "difference-arrays-problemset"
+        },
+        {
+          "uniqueId": "cf-2030D",
+          "name": "QED's Favorite Permutation",
+          "url": "https://codeforces.com/contest/2030/problem/D",
+          "source": "CF",
+          "difficulty": "Normal",
+          "isStarred": false,
+          "tags": [
+            "Difference Array",
+            "Sortings"
+          ],
+          "category": "difference-arrays-problemset"
+        },
+        {
+          "uniqueId": "spoj-Haybale",
+          "name": "Haybale Stacking",
+          "url": "https://www.spoj.com/problems/HAYBALE/",
+          "source": "SPOJ",
+          "difficulty": "Normal",
+          "isStarred": true,
+          "tags": [
+            "Prefix Sums"
+          ],
+          "category": "difference-arrays-problemset"
+        },
+        {
+          "uniqueId": "usaco-919",
+          "name": "Painting the Barn",
+          "url": "http://www.usaco.org/index.php?page=viewproblem2&cpid=919",
+          "source": "Silver",
+          "difficulty": "Normal",
+          "isStarred": false,
+          "tags": [
+            "2D Prefix Sums"
+          ],
+          "category": "difference-arrays-problemset"
+        },
+        {
+          "uniqueId": "usaco-923",
+          "name": "Painting the Barn",
+          "url": "http://www.usaco.org/index.php?page=viewproblem2&cpid=923",
+          "source": "Gold",
+          "difficulty": "Hard",
+          "isStarred": true,
+          "tags": [
+            "2D Prefix Sums",
+            "Max Subarray Sum"
+          ],
+          "category": "difference-arrays-problemset"
+        },
+        {
+          "uniqueId": "cf-104114N",
+          "name": "Nusret Gökçe",
+          "url": "https://codeforces.com/gym/104114/problem/N",
+          "source": "CF",
+          "difficulty": "Normal",
+          "isStarred": false,
+          "tags": [
+            "Prefix Sums"
+          ],
+          "category": "cum2"
+        },
+        {
+          "uniqueId": "cf-245H",
+          "name": "Queries for Number of Palindromes",
+          "url": "https://codeforces.com/contest/245/problem/H",
+          "source": "CF",
+          "difficulty": "Normal",
+          "isStarred": false,
+          "tags": [
+            "Prefix Sums"
+          ],
+          "category": "cum2"
+        },
+        {
+          "uniqueId": "usaco-416",
+          "name": "The Lazy Cow",
+          "url": "http://www.usaco.org/index.php?page=viewproblem2&cpid=416",
+          "source": "Old Silver",
+          "difficulty": "Hard",
+          "isStarred": false,
+          "tags": [
+            "2D Prefix Sums"
+          ],
+          "category": "cum2"
+        },
+        {
+          "uniqueId": "usaco-1063",
+          "name": "Rectangular Pasture",
+          "url": "http://www.usaco.org/index.php?page=viewproblem2&cpid=1063",
+          "source": "Silver",
+          "difficulty": "Hard",
+          "isStarred": false,
+          "tags": [
+            "2D Prefix Sums"
+          ],
+          "category": "cum2"
+        },
+        {
+          "uniqueId": "ac-nuske",
+          "name": "Nuske vs Phantom Thnook",
+          "url": "https://atcoder.jp/contests/agc015/tasks/agc015_c",
+          "source": "AC",
+          "difficulty": "Hard",
+          "isStarred": true,
+          "tags": [
+            "Trees",
+            "2D Prefix Sums"
+          ],
+          "category": "cum2"
+        },
+        {
+          "uniqueId": "usaco-744",
+          "name": "Modern Art",
+          "url": "http://www.usaco.org/index.php?page=viewproblem2&cpid=744",
+          "source": "Platinum",
+          "difficulty": "Very Hard",
+          "isStarred": false,
+          "tags": [
+            "2D Prefix Sums"
+          ],
+          "category": "cum2"
+        }
+      ]
+    },
+    {
+      "module_id": "two-pointers",
+      "module_name": "Two Pointers",
+      "problems": [
+        {
+          "uniqueId": "cf-279B",
+          "name": "Books",
+          "url": "https://codeforces.com/contest/279/problem/B",
+          "source": "CF",
+          "difficulty": "Easy",
+          "isStarred": true,
+          "tags": [
+            "2P"
+          ],
+          "category": "book"
+        },
+        {
+          "uniqueId": "cses-1640",
+          "name": "Sum of Two Values",
+          "url": "https://cses.fi/problemset/task/1640",
+          "source": "CSES",
+          "difficulty": "Easy",
+          "isStarred": true,
+          "tags": [
+            "2P",
+            "Sorting"
+          ],
+          "category": "general"
+        },
+        {
+          "uniqueId": "cses-1660",
+          "name": "Subarray Sums I",
+          "url": "https://cses.fi/problemset/task/1660",
+          "source": "CSES",
+          "difficulty": "Easy",
+          "isStarred": false,
+          "tags": [
+            "Sliding Window"
+          ],
+          "category": "general"
+        },
+        {
+          "uniqueId": "cses-1641",
+          "name": "Sum of Three Values",
+          "url": "https://cses.fi/problemset/task/1641",
+          "source": "CSES",
+          "difficulty": "Easy",
+          "isStarred": true,
+          "tags": [
+            "2P",
+            "Sorting"
+          ],
+          "category": "general"
+        },
+        {
+          "uniqueId": "usaco-738",
+          "name": "Paired Up",
+          "url": "http://www.usaco.org/index.php?page=viewproblem2&cpid=738",
+          "source": "Silver",
+          "difficulty": "Easy",
+          "isStarred": false,
+          "tags": [
+            "2P",
+            "Sorting"
+          ],
+          "category": "general"
+        },
+        {
+          "uniqueId": "cf-702C",
+          "name": "Cellular Network",
+          "url": "https://codeforces.com/contest/702/problem/C",
+          "source": "CF",
+          "difficulty": "Easy",
+          "isStarred": false,
+          "tags": [
+            "2P",
+            "Binary Search"
+          ],
+          "category": "general"
+        },
+        {
+          "uniqueId": "cf-701C",
+          "name": "They Are Everywhere",
+          "url": "https://codeforces.com/problemset/problem/701/C",
+          "source": "CF",
+          "difficulty": "Easy",
+          "isStarred": false,
+          "tags": [
+            "2P"
+          ],
+          "category": "general"
+        },
+        {
+          "uniqueId": "cf-1777C",
+          "name": "Quiz Master",
+          "url": "https://codeforces.com/contest/1777/problem/C",
+          "source": "CF",
+          "difficulty": "Normal",
+          "isStarred": false,
+          "tags": [
+            "2P",
+            "Sorting",
+            "Sliding Window"
+          ],
+          "category": "general"
+        },
+        {
+          "uniqueId": "usaco-643",
+          "name": "Diamond Collector",
+          "url": "http://www.usaco.org/index.php?page=viewproblem2&cpid=643",
+          "source": "Silver",
+          "difficulty": "Normal",
+          "isStarred": true,
+          "tags": [
+            "2P",
+            "Sorting"
+          ],
+          "category": "general"
+        },
+        {
+          "uniqueId": "usaco-918",
+          "name": "Sleepy Cow Herding",
+          "url": "http://www.usaco.org/index.php?page=viewproblem2&cpid=918",
+          "source": "Silver",
+          "difficulty": "Normal",
+          "isStarred": false,
+          "tags": [
+            "2P",
+            "Sorting"
+          ],
+          "category": "general"
+        },
+        {
+          "uniqueId": "cf-814C",
+          "name": "An impassioned circulation of affection",
+          "url": "https://codeforces.com/problemset/problem/814/C",
+          "source": "CF",
+          "difficulty": "Normal",
+          "isStarred": false,
+          "tags": [
+            "2P"
+          ],
+          "category": "general"
+        },
+        {
+          "uniqueId": "usaco-1470",
+          "name": "Cow Checkups",
+          "url": "https://usaco.org/index.php?page=viewproblem2&cpid=1470",
+          "source": "Silver",
+          "difficulty": "Normal",
+          "isStarred": false,
+          "tags": [
+            "Two Pointers",
+            "Prefix Sum",
+            "Binary Search"
+          ],
+          "category": "general"
+        }
+      ]
+    },
+    {
+      "module_id": "binary-search-sorted-array",
+      "module_name": "Binary Search Sorted Array",
+      "problems": [
+        {
+          "uniqueId": "usaco-666",
+          "name": "Counting Haybales",
+          "url": "http://www.usaco.org/index.php?page=viewproblem2&cpid=666",
+          "source": "Silver",
+          "difficulty": "Easy",
+          "isStarred": false,
+          "tags": [
+            "Binary Search"
+          ],
+          "category": "count"
+        },
+        {
+          "uniqueId": "cf-702C",
+          "name": "Cellular Network",
+          "url": "https://codeforces.com/contest/702/problem/C",
+          "source": "CF",
+          "difficulty": "Easy",
+          "isStarred": false,
+          "tags": [
+            "2P",
+            "Binary Search"
+          ],
+          "category": "general"
+        },
+        {
+          "uniqueId": "usaco-1303",
+          "name": "Cow-libi",
+          "url": "http://www.usaco.org/index.php?page=viewproblem2&cpid=1303",
+          "source": "Silver",
+          "difficulty": "Easy",
+          "isStarred": false,
+          "tags": [
+            "Binary Search"
+          ],
+          "category": "general"
+        }
+      ]
+    },
+    {
+      "module_id": "binary-search",
+      "module_name": "Binary Search",
+      "problems": [
+        {
+          "uniqueId": "cf-1201C",
+          "name": "Div 2 C - Maximum Median",
+          "url": "https://codeforces.com/contest/1201/problem/C",
+          "source": "CF",
+          "difficulty": "Easy",
+          "isStarred": false,
+          "tags": [
+            "Binary Search"
+          ],
+          "category": "ex"
+        },
+        {
+          "uniqueId": "usaco-690",
+          "name": "Cow Dance Show",
+          "url": "http://www.usaco.org/index.php?page=viewproblem2&cpid=690",
+          "source": "Silver",
+          "difficulty": "Easy",
+          "isStarred": false,
+          "tags": [
+            "Binary Search",
+            "Sorted Set"
+          ],
+          "category": "usaco"
+        },
+        {
+          "uniqueId": "usaco-858",
+          "name": "Convention",
+          "url": "http://www.usaco.org/index.php?page=viewproblem2&cpid=858",
+          "source": "Silver",
+          "difficulty": "Easy",
+          "isStarred": false,
+          "tags": [
+            "Binary Search",
+            "Sorting"
+          ],
+          "category": "usaco"
+        },
+        {
+          "uniqueId": "usaco-594",
+          "name": "Angry Cows",
+          "url": "http://www.usaco.org/index.php?page=viewproblem2&cpid=594",
+          "source": "Silver",
+          "difficulty": "Easy",
+          "isStarred": false,
+          "tags": [
+            "Binary Search",
+            "Sorting"
+          ],
+          "category": "usaco"
+        },
+        {
+          "uniqueId": "usaco-1038",
+          "name": "Social Distancing",
+          "url": "http://www.usaco.org/index.php?page=viewproblem2&cpid=1038",
+          "source": "Silver",
+          "difficulty": "Normal",
+          "isStarred": false,
+          "tags": [
+            "Binary Search",
+            "Sorting"
+          ],
+          "category": "usaco"
+        },
+        {
+          "uniqueId": "usaco-1302",
+          "name": "Bakery",
+          "url": "http://www.usaco.org/index.php?page=viewproblem2&cpid=1302",
+          "source": "Silver",
+          "difficulty": "Hard",
+          "isStarred": false,
+          "tags": [
+            "Binary Search"
+          ],
+          "category": "usaco"
+        },
+        {
+          "uniqueId": "usaco-597",
+          "name": "Angry Cows",
+          "url": "http://www.usaco.org/index.php?page=viewproblem2&cpid=597",
+          "source": "Gold",
+          "difficulty": "Hard",
+          "isStarred": true,
+          "tags": [
+            "Binary Search",
+            "Sorting",
+            "2P",
+            "Greedy"
+          ],
+          "category": "usaco"
+        },
+        {
+          "uniqueId": "usaco-991",
+          "name": "Loan Repayment",
+          "url": "http://www.usaco.org/index.php?page=viewproblem2&cpid=991",
+          "source": "Silver",
+          "difficulty": "Very Hard",
+          "isStarred": false,
+          "tags": [
+            "Binary Search",
+            "Sqrt"
+          ],
+          "category": "usaco"
+        },
+        {
+          "uniqueId": "usaco-1449",
+          "name": "Cowdependence",
+          "url": "https://usaco.org/index.php?page=viewproblem2&cpid=1449",
+          "source": "Gold",
+          "difficulty": "Very Hard",
+          "isStarred": false,
+          "tags": [
+            "Binary Search",
+            "Prefix Sums",
+            "Two Pointers",
+            "Sqrt"
+          ],
+          "category": "usaco"
+        },
+        {
+          "uniqueId": "usaco-624",
+          "name": "Load Balancing",
+          "url": "http://www.usaco.org/index.php?page=viewproblem2&cpid=624",
+          "source": "Platinum",
+          "difficulty": "Insane",
+          "isStarred": false,
+          "tags": [
+            "Binary Search",
+            "Sorting"
+          ],
+          "category": "usaco"
+        },
+        {
+          "uniqueId": "cses-1620",
+          "name": "Factory Machines",
+          "url": "https://cses.fi/problemset/task/1620",
+          "source": "CSES",
+          "difficulty": "Easy",
+          "isStarred": false,
+          "tags": [
+            "Binary Search"
+          ],
+          "category": "general"
+        },
+        {
+          "uniqueId": "cses-1085",
+          "name": "Array Division",
+          "url": "https://cses.fi/problemset/task/1085",
+          "source": "CSES",
+          "difficulty": "Easy",
+          "isStarred": true,
+          "tags": [
+            "Binary Search"
+          ],
+          "category": "general"
+        },
+        {
+          "uniqueId": "cf-1520F1",
+          "name": "Guess the K-th Zero (Easy)",
+          "url": "https://codeforces.com/contest/1520/problem/F1",
+          "source": "CF",
+          "difficulty": "Easy",
+          "isStarred": false,
+          "tags": [
+            "Binary Search"
+          ],
+          "category": "general"
+        },
+        {
+          "uniqueId": "cf-862E",
+          "name": "Mahmoud & Ehab & Function",
+          "url": "https://codeforces.com/contest/862/problem/E",
+          "source": "CF",
+          "difficulty": "Normal",
+          "isStarred": false,
+          "tags": [
+            "Binary Search"
+          ],
+          "category": "general"
+        },
+        {
+          "uniqueId": "cc-TRPTSTIC",
+          "name": "TripTastic",
+          "url": "https://www.codechef.com/problems/TRPTSTIC",
+          "source": "CC",
+          "difficulty": "Normal",
+          "isStarred": false,
+          "tags": [
+            "2D Prefix Sums",
+            "Binary Search"
+          ],
+          "category": "general"
+        },
+        {
+          "uniqueId": "cses-2422",
+          "name": "Multiplication Table",
+          "url": "https://cses.fi/problemset/task/2422",
+          "source": "CSES",
+          "difficulty": "Normal",
+          "isStarred": false,
+          "tags": [
+            "Binary Search"
+          ],
+          "category": "general"
+        },
+        {
+          "uniqueId": "cf-1117C",
+          "name": "Edu C: Magic Ship",
+          "url": "https://codeforces.com/problemset/problem/1117/C",
+          "source": "CF",
+          "difficulty": "Normal",
+          "isStarred": true,
+          "tags": [
+            "Binary Search",
+            "Prefix Sums"
+          ],
+          "category": "general"
+        },
+        {
+          "uniqueId": "cf-782B",
+          "name": "The Meeting Place Cannot Be Changed",
+          "url": "https://codeforces.com/contest/782/problem/B",
+          "source": "CF",
+          "difficulty": "Normal",
+          "isStarred": true,
+          "tags": [
+            "Binary Search"
+          ],
+          "category": "general"
+        },
+        {
+          "uniqueId": "cf-847B",
+          "name": "Preparing for Merge Sort",
+          "url": "https://codeforces.com/contest/847/problem/B",
+          "source": "CF",
+          "difficulty": "Normal",
+          "isStarred": false,
+          "tags": [
+            "Binary Search"
+          ],
+          "category": "general"
+        },
+        {
+          "uniqueId": "cf-1244E",
+          "name": "Minimizing Difference",
+          "url": "https://codeforces.com/contest/1244/problem/E",
+          "source": "CF",
+          "difficulty": "Normal",
+          "isStarred": false,
+          "tags": [
+            "Binary Search",
+            "Prefix Sums",
+            "Greedy"
+          ],
+          "category": "general"
+        },
+        {
+          "uniqueId": "cf-104468H",
+          "name": "Ammar-utiful Array",
+          "url": "https://codeforces.com/gym/104468/problem/H",
+          "source": "CF",
+          "difficulty": "Normal",
+          "isStarred": false,
+          "tags": [
+            "Binary Search",
+            "Prefix Sums"
+          ],
+          "category": "general"
+        },
+        {
+          "uniqueId": "ac-handshake",
+          "name": "Handshake",
+          "url": "https://atcoder.jp/contests/abc149/tasks/abc149_e",
+          "source": "AC",
+          "difficulty": "Hard",
+          "isStarred": false,
+          "tags": [
+            "Binary Search",
+            "Prefix Sums",
+            "Sorting"
+          ],
+          "category": "general"
+        },
+        {
+          "uniqueId": "cf-1486D",
+          "name": "Max Median",
+          "url": "https://codeforces.com/problemset/problem/1486/D",
+          "source": "CF",
+          "difficulty": "Hard",
+          "isStarred": false,
+          "tags": [
+            "Binary Search",
+            "Prefix Sums"
+          ],
+          "category": "general"
+        },
+        {
+          "uniqueId": "cf-1866G",
+          "name": "Grouped Carriages",
+          "url": "https://codeforces.com/contest/1866/problem/G",
+          "source": "CF",
+          "difficulty": "Hard",
+          "isStarred": false,
+          "tags": [
+            "Binary Search",
+            "Priority Queue"
+          ],
+          "category": "general"
+        },
+        {
+          "uniqueId": "cf-847E",
+          "name": "Packmen",
+          "url": "https://codeforces.com/contest/847/problem/E",
+          "source": "CF",
+          "difficulty": "Hard",
+          "isStarred": false,
+          "tags": [
+            "Binary Search"
+          ],
+          "category": "general"
+        },
+        {
+          "uniqueId": "cf-818F",
+          "name": "Level Generation",
+          "url": "https://codeforces.com/problemset/problem/818/F",
+          "source": "CF",
+          "difficulty": "Hard",
+          "isStarred": false,
+          "tags": [
+            "Binary Search"
+          ],
+          "category": "general"
+        },
+        {
+          "uniqueId": "baltic-12-mobile",
+          "name": "2012 - Mobile",
+          "url": "https://oj.uz/problem/view/BOI12_mobile",
+          "source": "Baltic OI",
+          "difficulty": "Very Hard",
+          "isStarred": false,
+          "tags": [
+            "Binary Search",
+            "Stack"
+          ],
+          "category": "general"
+        }
+      ]
+    },
+    {
+      "module_id": "sorting-custom",
+      "module_name": "Sorting Custom",
+      "problems": [
+        {
+          "uniqueId": "usaco-1063",
+          "name": "Rectangular Pasture",
+          "url": "http://www.usaco.org/index.php?page=viewproblem2&cpid=1063",
+          "source": "Silver",
+          "difficulty": "Hard",
+          "isStarred": false,
+          "tags": [
+            "2D Prefix Sums"
+          ],
+          "category": "sample2"
+        },
+        {
+          "uniqueId": "cfgym-102951D",
+          "name": "Static Range Queries",
+          "url": "https://codeforces.com/gym/102951/problem/D",
+          "source": "CF",
+          "difficulty": "Hard",
+          "isStarred": false,
+          "tags": [],
+          "category": "sample3"
+        },
+        {
+          "uniqueId": "cses-1619",
+          "name": "Restaurant Customers",
+          "url": "https://cses.fi/problemset/task/1619",
+          "source": "CSES",
+          "difficulty": "Easy",
+          "isStarred": false,
+          "tags": [
+            "Sorting",
+            "Prefix Sums"
+          ],
+          "category": "general"
+        },
+        {
+          "uniqueId": "cf-1000C",
+          "name": "Covered Points Count",
+          "url": "https://codeforces.com/problemset/problem/1000/C",
+          "source": "CF",
+          "difficulty": "Normal",
+          "isStarred": false,
+          "tags": [
+            "Sorting",
+            "Prefix Sums",
+            "Coordinate Compression"
+          ],
+          "category": "general"
+        },
+        {
+          "uniqueId": "usaco-786",
+          "name": "Lifeguards",
+          "url": "http://www.usaco.org/index.php?page=viewproblem2&cpid=786",
+          "source": "Silver",
+          "difficulty": "Normal",
+          "isStarred": false,
+          "tags": [
+            "Sorting",
+            "Prefix Sums"
+          ],
+          "category": "general"
+        },
+        {
+          "uniqueId": "usaco-787",
+          "name": "Rental Service",
+          "url": "http://www.usaco.org/index.php?page=viewproblem2&cpid=787",
+          "source": "Silver",
+          "difficulty": "Normal",
+          "isStarred": true,
+          "tags": [
+            "Sorting",
+            "Prefix Sums"
+          ],
+          "category": "general"
+        },
+        {
+          "uniqueId": "usaco-896",
+          "name": "Mountain View",
+          "url": "http://www.usaco.org/index.php?page=viewproblem2&cpid=896",
+          "source": "Silver",
+          "difficulty": "Normal",
+          "isStarred": true,
+          "tags": [
+            "Sorting"
+          ],
+          "category": "general"
+        },
+        {
+          "uniqueId": "usaco-1064",
+          "name": "Stuck in a Rut",
+          "url": "http://www.usaco.org/index.php?page=viewproblem2&cpid=1064",
+          "source": "Silver",
+          "difficulty": "Normal",
+          "isStarred": false,
+          "tags": [
+            "Sorting"
+          ],
+          "category": "general"
+        },
+        {
+          "uniqueId": "usaco-645",
+          "name": "Splitting the Field",
+          "url": "http://www.usaco.org/index.php?page=viewproblem2&cpid=645",
+          "source": "Gold",
+          "difficulty": "Normal",
+          "isStarred": true,
+          "tags": [
+            "Sorting",
+            "Prefix Sums"
+          ],
+          "category": "general"
+        },
+        {
+          "uniqueId": "cf-632C",
+          "name": "The Smallest String Concatenation",
+          "url": "https://codeforces.com/problemset/problem/632/C",
+          "source": "CF",
+          "difficulty": "Normal",
+          "isStarred": false,
+          "tags": [
+            "Sorting"
+          ],
+          "category": "general"
+        },
+        {
+          "uniqueId": "cf-1478C",
+          "name": "Nezzar and Symmetric Array",
+          "url": "https://codeforces.com/problemset/problem/1478/C",
+          "source": "CF",
+          "difficulty": "Normal",
+          "isStarred": false,
+          "tags": [
+            "Sorting",
+            "Prefix Sums"
+          ],
+          "category": "general"
+        },
+        {
+          "uniqueId": "cf-1472E",
+          "name": "Correct Placement",
+          "url": "https://codeforces.com/problemset/problem/1472/E",
+          "source": "CF",
+          "difficulty": "Normal",
+          "isStarred": false,
+          "tags": [
+            "Sorting"
+          ],
+          "category": "general"
+        },
+        {
+          "uniqueId": "usaco-1015",
+          "name": "Triangles",
+          "url": "http://www.usaco.org/index.php?page=viewproblem2&cpid=1015",
+          "source": "Silver",
+          "difficulty": "Hard",
+          "isStarred": false,
+          "tags": [
+            "Sorting"
+          ],
+          "category": "general"
+        },
+        {
+          "uniqueId": "usaco-834",
+          "name": "Out Of Sorts",
+          "url": "http://www.usaco.org/index.php?page=viewproblem2&cpid=834",
+          "source": "Silver",
+          "difficulty": "Hard",
+          "isStarred": false,
+          "tags": [
+            "Sorting"
+          ],
+          "category": "general"
+        },
+        {
+          "uniqueId": "usaco-967",
+          "name": "Meetings",
+          "url": "http://www.usaco.org/index.php?page=viewproblem2&cpid=967",
+          "source": "Silver",
+          "difficulty": "Very Hard",
+          "isStarred": false,
+          "tags": [
+            "Sorting"
+          ],
+          "category": "general"
+        }
+      ]
+    },
+    {
+      "module_id": "greedy-sorting",
+      "module_name": "Greedy Sorting",
+      "problems": [
+        {
+          "uniqueId": "cfgym-102951B",
+          "name": "Studying Algorithms",
+          "url": "https://codeforces.com/gym/102951/problem/B",
+          "source": "CF",
+          "difficulty": "Very Easy",
+          "isStarred": false,
+          "tags": [
+            "Sorting",
+            "Greedy"
+          ],
+          "category": "studyalgo"
+        },
+        {
+          "uniqueId": "cses-1629",
+          "name": "Movie Festival",
+          "url": "https://cses.fi/problemset/task/1629",
+          "source": "CSES",
+          "difficulty": "Easy",
+          "isStarred": false,
+          "tags": [
+            "Sorting",
+            "Greedy"
+          ],
+          "category": "movie"
+        },
+        {
+          "uniqueId": "cses-1074",
+          "name": "Stick Lengths",
+          "url": "https://cses.fi/problemset/task/1074",
+          "source": "CSES",
+          "difficulty": "Easy",
+          "isStarred": false,
+          "tags": [
+            "Median"
+          ],
+          "category": "cses"
+        },
+        {
+          "uniqueId": "cses-1084",
+          "name": "Apartments",
+          "url": "https://cses.fi/problemset/task/1084",
+          "source": "CSES",
+          "difficulty": "Easy",
+          "isStarred": false,
+          "tags": [
+            "Greedy",
+            "Sorting"
+          ],
+          "category": "cses"
+        },
+        {
+          "uniqueId": "cses-1090",
+          "name": "Ferris Wheel",
+          "url": "https://cses.fi/problemset/task/1090",
+          "source": "CSES",
+          "difficulty": "Easy",
+          "isStarred": false,
+          "tags": [
+            "Greedy",
+            "Sorting",
+            "2P"
+          ],
+          "category": "cses"
+        },
+        {
+          "uniqueId": "cses-1630",
+          "name": "Tasks & Deadlines",
+          "url": "https://cses.fi/problemset/task/1630",
+          "source": "CSES",
+          "difficulty": "Easy",
+          "isStarred": true,
+          "tags": [
+            "Greedy",
+            "Sorting"
+          ],
+          "category": "cses"
+        },
+        {
+          "uniqueId": "cf-762B",
+          "name": "USB vs. PS/2",
+          "url": "https://codeforces.com/contest/762/problem/B",
+          "source": "CF",
+          "difficulty": "Easy",
+          "isStarred": false,
+          "tags": [
+            "Greedy",
+            "Sorting",
+            "2P"
+          ],
+          "category": "other"
+        },
+        {
+          "uniqueId": "usaco-835",
+          "name": "Lemonade Line",
+          "url": "http://www.usaco.org/index.php?page=viewproblem2&cpid=835",
+          "source": "Silver",
+          "difficulty": "Easy",
+          "isStarred": false,
+          "tags": [
+            "Greedy",
+            "Sorting"
+          ],
+          "category": "other"
+        },
+        {
+          "uniqueId": "usaco-571",
+          "name": "High Card Wins",
+          "url": "http://www.usaco.org/index.php?page=viewproblem2&cpid=571",
+          "source": "Silver",
+          "difficulty": "Easy",
+          "isStarred": false,
+          "tags": [
+            "Greedy",
+            "Sorting"
+          ],
+          "category": "other"
+        },
+        {
+          "uniqueId": "usaco-573",
+          "name": "High Card Low Card",
+          "url": "http://www.usaco.org/index.php?page=viewproblem2&cpid=573",
+          "source": "Gold",
+          "difficulty": "Easy",
+          "isStarred": true,
+          "tags": [
+            "Greedy",
+            "Sorting"
+          ],
+          "category": "other"
+        },
+        {
+          "uniqueId": "cf-1158A",
+          "name": "The Party and Sweets",
+          "url": "https://codeforces.com/problemset/problem/1158/A",
+          "source": "CF",
+          "difficulty": "Easy",
+          "isStarred": false,
+          "tags": [
+            "Sorting",
+            "Greedy"
+          ],
+          "category": "other"
+        },
+        {
+          "uniqueId": "usaco-1350",
+          "name": "Bovine Acrobatics",
+          "url": "https://usaco.org/index.php?page=viewproblem2&cpid=1350",
+          "source": "Silver",
+          "difficulty": "Easy",
+          "isStarred": false,
+          "tags": [
+            "Sorting",
+            "Greedy",
+            "Deque"
+          ],
+          "category": "other"
+        },
+        {
+          "uniqueId": "usaco-810",
+          "name": "Rest Stops",
+          "url": "http://www.usaco.org/index.php?page=viewproblem2&cpid=810",
+          "source": "Silver",
+          "difficulty": "Easy",
+          "isStarred": false,
+          "tags": [
+            "Greedy"
+          ],
+          "category": "other"
+        },
+        {
+          "uniqueId": "usaco-990",
+          "name": "Berry Picking",
+          "url": "http://www.usaco.org/index.php?page=viewproblem2&cpid=990",
+          "source": "Silver",
+          "difficulty": "Normal",
+          "isStarred": false,
+          "tags": [
+            "Sorting",
+            "Greedy"
+          ],
+          "category": "other"
+        },
+        {
+          "uniqueId": "cf-321B",
+          "name": "Ciel and Duel",
+          "url": "https://codeforces.com/contest/321/problem/B",
+          "source": "CF",
+          "difficulty": "Normal",
+          "isStarred": false,
+          "tags": [
+            "Greedy"
+          ],
+          "category": "other"
+        },
+        {
+          "uniqueId": "cf-1783C",
+          "name": "Yet Another Tournament",
+          "url": "https://codeforces.com/contest/1783/problem/C",
+          "source": "CF",
+          "difficulty": "Normal",
+          "isStarred": false,
+          "tags": [
+            "Greedy",
+            "Sorting"
+          ],
+          "category": "other"
+        },
+        {
+          "uniqueId": "usaco-1158",
+          "name": "Closest Cow Wins",
+          "url": "http://www.usaco.org/index.php?page=viewproblem2&cpid=1158",
+          "source": "Silver",
+          "difficulty": "Hard",
+          "isStarred": false,
+          "tags": [
+            "Sorting",
+            "Greedy",
+            "2P"
+          ],
+          "category": "other"
+        }
+      ]
+    },
+    {
+      "module_id": "priority-queues",
+      "module_name": "Priority Queues",
+      "problems": [
+        {
+          "uniqueId": "cses-1164",
+          "name": "Room Allocation",
+          "url": "https://cses.fi/problemset/task/1164",
+          "source": "CSES",
+          "difficulty": "Normal",
+          "isStarred": true,
+          "tags": [
+            "Priority Queue",
+            "Sorting"
+          ],
+          "category": "sample"
+        },
+        {
+          "uniqueId": "usaco-859",
+          "name": "Convention II",
+          "url": "http://www.usaco.org/index.php?page=viewproblem2&cpid=859",
+          "source": "Silver",
+          "difficulty": "Normal",
+          "isStarred": true,
+          "tags": [
+            "Priority Queue",
+            "Sorting"
+          ],
+          "category": "general"
+        },
+        {
+          "uniqueId": "cf-104002E",
+          "name": "William and Robot",
+          "url": "https://codeforces.com/gym/104002/problem/E",
+          "source": "CF",
+          "difficulty": "Normal",
+          "isStarred": false,
+          "tags": [
+            "Priority Queue"
+          ],
+          "category": "general"
+        },
+        {
+          "uniqueId": "ac-packing",
+          "name": "Packing Under Range Regulations",
+          "url": "https://atcoder.jp/contests/abc214/tasks/abc214_e",
+          "source": "AC",
+          "difficulty": "Normal",
+          "isStarred": true,
+          "tags": [
+            "Sorting",
+            "Priority Queue"
+          ],
+          "category": "general"
+        },
+        {
+          "uniqueId": "usaco-714",
+          "name": "Why Did the Cow Cross the Road",
+          "url": "http://www.usaco.org/index.php?page=viewproblem2&cpid=714",
+          "source": "Silver",
+          "difficulty": "Normal",
+          "isStarred": false,
+          "tags": [
+            "Sorting",
+            "Priority Queue"
+          ],
+          "category": "general"
+        },
+        {
+          "uniqueId": "leetcode-502",
+          "name": "IPO",
+          "url": "https://leetcode.com/problems/ipo",
+          "source": "LC",
+          "difficulty": "Normal",
+          "isStarred": false,
+          "tags": [
+            "Greedy",
+            "Sorting",
+            "Priority Queue"
+          ],
+          "category": "general"
+        },
+        {
+          "uniqueId": "usaco-763",
+          "name": "Milk Measurement",
+          "url": "http://www.usaco.org/index.php?page=viewproblem2&cpid=763",
+          "source": "Silver",
+          "difficulty": "Normal",
+          "isStarred": false,
+          "tags": [
+            "Sorted Set",
+            "Priority Queue"
+          ],
+          "category": "general"
+        },
+        {
+          "uniqueId": "cses-3152",
+          "name": "Bubble Sort Rounds II",
+          "url": "https://cses.fi/problemset/task/3152/",
+          "source": "CSES",
+          "difficulty": "Hard",
+          "isStarred": false,
+          "tags": [
+            "Priority Queue"
+          ],
+          "category": "general"
+        },
+        {
+          "uniqueId": "usaco-1447",
+          "name": "Deforestation",
+          "url": "https://usaco.org/index.php?page=viewproblem2&cpid=1447",
+          "source": "Silver",
+          "difficulty": "Hard",
+          "isStarred": true,
+          "tags": [
+            "Binary Search",
+            "Sorting"
+          ],
+          "category": "general"
+        },
+        {
+          "uniqueId": "usaco-1451",
+          "name": "Job Completion",
+          "url": "https://usaco.org/index.php?page=viewproblem2&cpid=1451",
+          "source": "Gold",
+          "difficulty": "Hard",
+          "isStarred": false,
+          "tags": [
+            "Greedy",
+            "Priority Queue"
+          ],
+          "category": "general"
+        },
+        {
+          "uniqueId": "cses-1161",
+          "name": "Stick Division",
+          "url": "https://cses.fi/problemset/task/1161",
+          "source": "CSES",
+          "difficulty": "Hard",
+          "isStarred": false,
+          "tags": [
+            "Greedy",
+            "Priority Queue"
+          ],
+          "category": "general"
+        },
+        {
+          "uniqueId": "cf-1805F1",
+          "name": "Survival of the Weakest (easy version)",
+          "url": "https://codeforces.com/problemset/problem/1805/F1",
+          "source": "CF",
+          "difficulty": "Hard",
+          "isStarred": true,
+          "tags": [
+            "Priority Queue",
+            "Sorting"
+          ],
+          "category": "general"
+        },
+        {
+          "uniqueId": "cf-2085D",
+          "name": "Serval and Kaitenzushi Buffet",
+          "url": "https://codeforces.com/contest/2085/problem/D",
+          "source": "CF",
+          "difficulty": "Hard",
+          "isStarred": true,
+          "tags": [
+            "Priority Queue",
+            "Sorting"
+          ],
+          "category": "general"
+        }
+      ]
+    },
+    {
+      "module_id": "graph-traversal",
+      "module_name": "Graph Traversal",
+      "problems": [
+        {
+          "uniqueId": "cses-1666",
+          "name": "Building Roads",
+          "url": "https://cses.fi/problemset/task/1666",
+          "source": "CSES",
+          "difficulty": "Easy",
+          "isStarred": false,
+          "tags": [
+            "Connected Components"
+          ],
+          "category": "connSample"
+        },
+        {
+          "uniqueId": "usaco-644",
+          "name": "Closing the Farm",
+          "url": "http://www.usaco.org/index.php?page=viewproblem2&cpid=644",
+          "source": "Silver",
+          "difficulty": "Easy",
+          "isStarred": false,
+          "tags": [
+            "Connected Components"
+          ],
+          "category": "general"
+        },
+        {
+          "uniqueId": "usaco-668",
+          "name": "Moocast",
+          "url": "http://www.usaco.org/index.php?page=viewproblem2&cpid=668",
+          "source": "Silver",
+          "difficulty": "Easy",
+          "isStarred": true,
+          "tags": [
+            "Connected Components",
+            "DFS",
+            "BFS"
+          ],
+          "category": "general"
+        },
+        {
+          "uniqueId": "usaco-944",
+          "name": "Fence Planning",
+          "url": "http://www.usaco.org/index.php?page=viewproblem2&cpid=944",
+          "source": "Silver",
+          "difficulty": "Easy",
+          "isStarred": true,
+          "tags": [
+            "Connected Components"
+          ],
+          "category": "general"
+        },
+        {
+          "uniqueId": "kattis-birthday",
+          "name": "Birthday Party",
+          "url": "https://open.kattis.com/problems/birthday",
+          "source": "Kattis",
+          "difficulty": "Easy",
+          "isStarred": false,
+          "tags": [
+            "Connected Components"
+          ],
+          "category": "general"
+        },
+        {
+          "uniqueId": "acsl-rank",
+          "name": "Rank",
+          "url": "https://dmoj.ca/problem/acsl1p4",
+          "source": "ACSL",
+          "difficulty": "Easy",
+          "isStarred": false,
+          "tags": [
+            "DFS"
+          ],
+          "category": "general"
+        },
+        {
+          "uniqueId": "cses-1682",
+          "name": "Flight Routes Check",
+          "url": "https://cses.fi/problemset/task/1682",
+          "source": "CSES",
+          "difficulty": "Normal",
+          "isStarred": true,
+          "tags": [
+            "DFS"
+          ],
+          "category": "general"
+        },
+        {
+          "uniqueId": "csa-bfsdfs",
+          "name": "BFS-DFS",
+          "url": "https://csacademy.com/contest/archive/task/bfs-dfs",
+          "source": "CSA",
+          "difficulty": "Normal",
+          "isStarred": false,
+          "tags": [
+            "BFS",
+            "DFS"
+          ],
+          "category": "general"
+        },
+        {
+          "uniqueId": "usaco-669",
+          "name": "Moocast",
+          "url": "http://www.usaco.org/index.php?page=viewproblem2&cpid=669",
+          "source": "Gold",
+          "difficulty": "Normal",
+          "isStarred": false,
+          "tags": [
+            "Connected Components",
+            "Binary Search"
+          ],
+          "category": "general"
+        },
+        {
+          "uniqueId": "usaco-992",
+          "name": "Wormhole Sort",
+          "url": "http://www.usaco.org/index.php?page=viewproblem2&cpid=992",
+          "source": "Silver",
+          "difficulty": "Normal",
+          "isStarred": true,
+          "tags": [
+            "Connected Components",
+            "Binary Search"
+          ],
+          "category": "general"
+        },
+        {
+          "uniqueId": "usaco-1304",
+          "name": "Moo Route II",
+          "url": "https://usaco.org/index.php?page=viewproblem2&cpid=1304",
+          "source": "Silver",
+          "difficulty": "Normal",
+          "isStarred": false,
+          "tags": [
+            "BFS"
+          ],
+          "category": "general"
+        },
+        {
+          "uniqueId": "usaco-1159",
+          "name": "Connecting Two Barns",
+          "url": "http://www.usaco.org/index.php?page=viewproblem2&cpid=1159",
+          "source": "Silver",
+          "difficulty": "Normal",
+          "isStarred": false,
+          "tags": [
+            "Connected Components",
+            "2P",
+            "Binary Search"
+          ],
+          "category": "general"
+        },
+        {
+          "uniqueId": "usaco-1206",
+          "name": "Redistributing Gifts",
+          "url": "http://usaco.org/index.php?page=viewproblem2&cpid=1206",
+          "source": "Silver",
+          "difficulty": "Normal",
+          "isStarred": false,
+          "tags": [
+            "DFS"
+          ],
+          "category": "general"
+        },
+        {
+          "uniqueId": "cf-1833E",
+          "name": "Round Dance",
+          "url": "https://codeforces.com/contest/1833/problem/E",
+          "source": "CF",
+          "difficulty": "Normal",
+          "isStarred": false,
+          "tags": [
+            "DFS",
+            "Connected Components"
+          ],
+          "category": "general"
+        },
+        {
+          "uniqueId": "cses-3294",
+          "name": "Subarray Sum Constraints",
+          "url": "https://cses.fi/problemset/task/3294",
+          "source": "CSES",
+          "difficulty": "Normal",
+          "isStarred": false,
+          "tags": [
+            "DFS",
+            "Connected Components",
+            "Prefix Sums"
+          ],
+          "category": "general"
+        },
+        {
+          "uniqueId": "cf-920E",
+          "name": "Connected Components?",
+          "url": "https://codeforces.com/problemset/problem/920/E",
+          "source": "CF",
+          "difficulty": "Hard",
+          "isStarred": false,
+          "tags": [
+            "DFS",
+            "Sorted Set"
+          ],
+          "category": "general"
+        },
+        {
+          "uniqueId": "kattis-LaneSwitching",
+          "name": "Lane Switching",
+          "url": "https://open.kattis.com/problems/laneswitching",
+          "source": "Kattis",
+          "difficulty": "Very Hard",
+          "isStarred": false,
+          "tags": [
+            "Connected Components",
+            "Binary Search"
+          ],
+          "category": "general"
+        },
+        {
+          "uniqueId": "usaco-1184",
+          "name": "Cereal 2",
+          "url": "http://www.usaco.org/index.php?page=viewproblem2&cpid=1184",
+          "source": "Silver",
+          "difficulty": "Very Hard",
+          "isStarred": false,
+          "tags": [
+            "Spanning Tree",
+            "Constructive",
+            "Cycles"
+          ],
+          "category": "general"
+        },
+        {
+          "uniqueId": "cses-1668",
+          "name": "Building Teams",
+          "url": "https://cses.fi/problemset/task/1668",
+          "source": "CSES",
+          "difficulty": "Easy",
+          "isStarred": false,
+          "tags": [
+            "Bipartite"
+          ],
+          "category": "bipsample"
+        },
+        {
+          "uniqueId": "cf-862B",
+          "name": "Bipartiteness",
+          "url": "https://codeforces.com/contest/862/problem/B",
+          "source": "CF",
+          "difficulty": "Easy",
+          "isStarred": false,
+          "tags": [
+            "Bipartite"
+          ],
+          "category": "bip"
+        },
+        {
+          "uniqueId": "usaco-920",
+          "name": "The Great Revegetation",
+          "url": "http://www.usaco.org/index.php?page=viewproblem2&cpid=920",
+          "source": "Silver",
+          "difficulty": "Easy",
+          "isStarred": true,
+          "tags": [
+            "Bipartite"
+          ],
+          "category": "bip"
+        },
+        {
+          "uniqueId": "cf-1176E",
+          "name": "Cover it!",
+          "url": "https://codeforces.com/problemset/problem/1176/E",
+          "source": "CF",
+          "difficulty": "Easy",
+          "isStarred": false,
+          "tags": [
+            "Bipartite"
+          ],
+          "category": "bip"
+        },
+        {
+          "uniqueId": "baltic-20-graph",
+          "name": "2020 - Graph",
+          "url": "https://codeforces.com/contest/1387/problem/A",
+          "source": "Baltic OI",
+          "difficulty": "Hard",
+          "isStarred": false,
+          "tags": [
+            "DFS",
+            "Median"
+          ],
+          "category": "bip"
+        },
+        {
+          "uniqueId": "cc-AMONGUS2",
+          "name": "Among Us",
+          "url": "https://www.codechef.com/INOIPRAC/problems/AMONGUS2",
+          "source": "CC",
+          "difficulty": "Hard",
+          "isStarred": false,
+          "tags": [
+            "DFS",
+            "Bipartite"
+          ],
+          "category": "bip"
+        },
+        {
+          "uniqueId": "cf-1991E",
+          "name": "Coloring Game",
+          "url": "https://codeforces.com/contest/1991/problem/E",
+          "source": "CF",
+          "difficulty": "Hard",
+          "isStarred": false,
+          "tags": [
+            "DFS",
+            "Bipartite"
+          ],
+          "category": "bip"
+        },
+        {
+          "uniqueId": "cf-2154D",
+          "name": "Catshock",
+          "url": "https://codeforces.com/contest/2154/problem/D",
+          "source": "CF",
+          "difficulty": "Hard",
+          "isStarred": false,
+          "tags": [
+            "Trees",
+            "Bipartite"
+          ],
+          "category": "bip"
+        },
+        {
+          "uniqueId": "apio-11-TableColoring",
+          "name": "2011 - Table Coloring",
+          "url": "https://dmoj.ca/problem/apio11p1",
+          "source": "APIO",
+          "difficulty": "Very Hard",
+          "isStarred": false,
+          "tags": [
+            "Bipartite"
+          ],
+          "category": "bip"
+        }
+      ]
+    },
+    {
+      "module_id": "flood-fill",
+      "module_name": "Flood Fill",
+      "problems": [
+        {
+          "uniqueId": "cses-1192",
+          "name": "Counting Rooms",
+          "url": "https://cses.fi/problemset/task/1192",
+          "source": "CSES",
+          "difficulty": "Easy",
+          "isStarred": false,
+          "tags": [
+            "Flood Fill"
+          ],
+          "category": "sample"
+        },
+        {
+          "uniqueId": "usaco-895",
+          "name": "Icy Perimeter",
+          "url": "http://www.usaco.org/index.php?page=viewproblem2&cpid=895",
+          "source": "Silver",
+          "difficulty": "Easy",
+          "isStarred": true,
+          "tags": [
+            "Flood Fill"
+          ],
+          "category": "general"
+        },
+        {
+          "uniqueId": "cf-1365D",
+          "name": "Solve The Maze",
+          "url": "https://codeforces.com/contest/1365/problem/D",
+          "source": "CF",
+          "difficulty": "Easy",
+          "isStarred": false,
+          "tags": [
+            "Flood Fill"
+          ],
+          "category": "general"
+        },
+        {
+          "uniqueId": "kattis-sverigekartan",
+          "name": "Map of Sweden",
+          "url": "https://open.kattis.com/problems/sverigekartan",
+          "source": "Kattis",
+          "difficulty": "Easy",
+          "isStarred": false,
+          "tags": [
+            "Flood Fill",
+            "Connected Components"
+          ],
+          "category": "general"
+        },
+        {
+          "uniqueId": "usaco-380",
+          "name": "Cross Country Skiing",
+          "url": "http://www.usaco.org/index.php?page=viewproblem2&cpid=380",
+          "source": "Old Silver",
+          "difficulty": "Easy",
+          "isStarred": true,
+          "tags": [
+            "Flood Fill",
+            "Binary Search"
+          ],
+          "category": "general"
+        },
+        {
+          "uniqueId": "usaco-570",
+          "name": "Switching on the Lights",
+          "url": "http://www.usaco.org/index.php?page=viewproblem2&cpid=570",
+          "source": "Silver",
+          "difficulty": "Normal",
+          "isStarred": false,
+          "tags": [
+            "Flood Fill"
+          ],
+          "category": "general"
+        },
+        {
+          "uniqueId": "usaco-596",
+          "name": "Build Gates",
+          "url": "http://www.usaco.org/index.php?page=viewproblem2&cpid=596",
+          "source": "Silver",
+          "difficulty": "Normal",
+          "isStarred": false,
+          "tags": [
+            "Flood Fill"
+          ],
+          "category": "general"
+        },
+        {
+          "uniqueId": "usaco-620",
+          "name": "Milk Pails",
+          "url": "http://www.usaco.org/index.php?page=viewproblem2&cpid=620",
+          "source": "Silver",
+          "difficulty": "Normal",
+          "isStarred": false,
+          "tags": [
+            "Flood Fill"
+          ],
+          "category": "general"
+        },
+        {
+          "uniqueId": "usaco-740",
+          "name": "Where's Bessie?",
+          "url": "http://www.usaco.org/index.php?page=viewproblem2&cpid=740",
+          "source": "Silver",
+          "difficulty": "Normal",
+          "isStarred": true,
+          "tags": [
+            "Flood Fill"
+          ],
+          "category": "general"
+        },
+        {
+          "uniqueId": "usaco-716",
+          "name": "Why Did the Cow Cross the Road III",
+          "url": "http://www.usaco.org/index.php?page=viewproblem2&cpid=716",
+          "source": "Silver",
+          "difficulty": "Normal",
+          "isStarred": true,
+          "tags": [
+            "Flood Fill"
+          ],
+          "category": "general"
+        },
+        {
+          "uniqueId": "usaco-860",
+          "name": "Mooyo Mooyo",
+          "url": "http://www.usaco.org/index.php?page=viewproblem2&cpid=860",
+          "source": "Silver",
+          "difficulty": "Normal",
+          "isStarred": false,
+          "tags": [
+            "Flood Fill"
+          ],
+          "category": "general"
+        },
+        {
+          "uniqueId": "usaco-1110",
+          "name": "Comfortable Cows",
+          "url": "http://www.usaco.org/index.php?page=viewproblem2&cpid=1110",
+          "source": "Silver",
+          "difficulty": "Normal",
+          "isStarred": false,
+          "tags": [
+            "Flood Fill"
+          ],
+          "category": "general"
+        },
+        {
+          "uniqueId": "usaco-811",
+          "name": "Snow Boots",
+          "url": "http://www.usaco.org/index.php?page=viewproblem2&cpid=811",
+          "source": "Silver",
+          "difficulty": "Hard",
+          "isStarred": false,
+          "tags": [
+            "Flood Fill"
+          ],
+          "category": "general"
+        },
+        {
+          "uniqueId": "usaco-1448",
+          "name": "2D Conveyor Belt",
+          "url": "https://usaco.org/index.php?page=viewproblem2&cpid=1448",
+          "source": "Silver",
+          "difficulty": "Hard",
+          "isStarred": false,
+          "tags": [
+            "Flood Fill"
+          ],
+          "category": "general"
+        },
+        {
+          "uniqueId": "usaco-1134",
+          "name": "Maze Tac Toe",
+          "url": "http://www.usaco.org/index.php?page=viewproblem2&cpid=1134",
+          "source": "Silver",
+          "difficulty": "Hard",
+          "isStarred": false,
+          "tags": [
+            "Flood Fill"
+          ],
+          "category": "general"
+        },
+        {
+          "uniqueId": "usaco-836",
+          "name": "Multiplayer Moo",
+          "url": "http://www.usaco.org/index.php?page=viewproblem2&cpid=836",
+          "source": "Silver",
+          "difficulty": "Hard",
+          "isStarred": false,
+          "tags": [
+            "Flood Fill"
+          ],
+          "category": "general"
+        }
+      ]
+    },
+    {
+      "module_id": "intro-tree",
+      "module_name": "Intro Tree",
+      "problems": [
+        {
+          "uniqueId": "cses-1674",
+          "name": "Subordinates",
+          "url": "https://cses.fi/problemset/task/1674",
+          "source": "CSES",
+          "difficulty": "Easy",
+          "isStarred": false,
+          "tags": [
+            "Tree"
+          ],
+          "category": "treeSam"
+        },
+        {
+          "uniqueId": "cf-755C",
+          "name": "PolandBall & Forest",
+          "url": "https://codeforces.com/contest/755/problem/C",
+          "source": "CF",
+          "difficulty": "Easy",
+          "isStarred": false,
+          "tags": [
+            "Tree",
+            "Connected Components",
+            "Diameter"
+          ],
+          "category": "tree"
+        },
+        {
+          "uniqueId": "usaco-788",
+          "name": "Mootube",
+          "url": "http://www.usaco.org/index.php?page=viewproblem2&cpid=788",
+          "source": "Silver",
+          "difficulty": "Easy",
+          "isStarred": true,
+          "tags": [
+            "Tree",
+            "Connected Components"
+          ],
+          "category": "tree"
+        },
+        {
+          "uniqueId": "cf-839C",
+          "name": "Journey",
+          "url": "https://codeforces.com/contest/839/problem/C",
+          "source": "CF",
+          "difficulty": "Easy",
+          "isStarred": false,
+          "tags": [
+            "Tree"
+          ],
+          "category": "tree"
+        },
+        {
+          "uniqueId": "usaco-968",
+          "name": "Milk Visits",
+          "url": "http://www.usaco.org/index.php?page=viewproblem2&cpid=968",
+          "source": "Silver",
+          "difficulty": "Easy",
+          "isStarred": true,
+          "tags": [
+            "Tree",
+            "Connected Components"
+          ],
+          "category": "tree"
+        },
+        {
+          "uniqueId": "usaco-1062",
+          "name": "Cowntagion",
+          "url": "http://www.usaco.org/index.php?page=viewproblem2&cpid=1062",
+          "source": "Silver",
+          "difficulty": "Easy",
+          "isStarred": false,
+          "tags": [
+            "Greedy",
+            "Tree"
+          ],
+          "category": "tree"
+        },
+        {
+          "uniqueId": "usaco-894",
+          "name": "Grass Planting",
+          "url": "http://www.usaco.org/index.php?page=viewproblem2&cpid=894",
+          "source": "Silver",
+          "difficulty": "Easy",
+          "isStarred": true,
+          "tags": [
+            "Tree",
+            "Coloring"
+          ],
+          "category": "tree"
+        },
+        {
+          "uniqueId": "usaco-833",
+          "name": "Family Tree",
+          "url": "http://www.usaco.org/index.php?page=viewproblem2&cpid=833",
+          "source": "Bronze",
+          "difficulty": "Easy",
+          "isStarred": false,
+          "tags": [
+            "Tree"
+          ],
+          "category": "tree"
+        },
+        {
+          "uniqueId": "cses-1131",
+          "name": "Tree Diameter",
+          "url": "https://cses.fi/problemset/task/1131",
+          "source": "CSES",
+          "difficulty": "Normal",
+          "isStarred": true,
+          "tags": [
+            "Tree"
+          ],
+          "category": "tree"
+        },
+        {
+          "uniqueId": "cf-104536F",
+          "name": "Minimize the Diameter",
+          "url": "https://codeforces.com/gym/104536/problem/F",
+          "source": "CF",
+          "difficulty": "Normal",
+          "isStarred": false,
+          "tags": [
+            "Tree"
+          ],
+          "category": "tree"
+        },
+        {
+          "uniqueId": "cses-1132",
+          "name": "Tree Distances I",
+          "url": "https://cses.fi/problemset/task/1132",
+          "source": "CSES",
+          "difficulty": "Normal",
+          "isStarred": false,
+          "tags": [
+            "Tree"
+          ],
+          "category": "tree"
+        },
+        {
+          "uniqueId": "cses-1133",
+          "name": "Tree Distances II",
+          "url": "https://cses.fi/problemset/task/1133",
+          "source": "CSES",
+          "difficulty": "Normal",
+          "isStarred": false,
+          "tags": [
+            "Tree"
+          ],
+          "category": "tree"
+        },
+        {
+          "uniqueId": "usaco-1520",
+          "name": "Ski Slope",
+          "url": "https://usaco.org/index.php?page=viewproblem2&cpid=1520",
+          "source": "Silver",
+          "difficulty": "Normal",
+          "isStarred": false,
+          "tags": [
+            "Tree",
+            "Sorting",
+            "Binary Search"
+          ],
+          "category": "tree"
+        },
+        {
+          "uniqueId": "usaco-1016",
+          "name": "Clock Tree",
+          "url": "http://www.usaco.org/index.php?page=viewproblem2&cpid=1016",
+          "source": "Silver",
+          "difficulty": "Normal",
+          "isStarred": false,
+          "tags": [
+            "Tree",
+            "Bipartite"
+          ],
+          "category": "tree"
+        },
+        {
+          "uniqueId": "cses-2179",
+          "name": "Even Outdegree Edges",
+          "url": "https://cses.fi/problemset/task/2179",
+          "source": "CSES",
+          "difficulty": "Hard",
+          "isStarred": true,
+          "tags": [
+            "DFS",
+            "Spanning Tree"
+          ],
+          "category": "tree"
+        },
+        {
+          "uniqueId": "cf-860D",
+          "name": "Wizard's Tour",
+          "url": "https://codeforces.com/contest/860/problem/D",
+          "source": "CF",
+          "difficulty": "Hard",
+          "isStarred": false,
+          "tags": [
+            "DFS",
+            "Spanning Tree"
+          ],
+          "category": "tree"
+        }
+      ]
+    },
+    {
+      "module_id": "func-graphs",
+      "module_name": "Func Graphs",
+      "problems": [
+        {
+          "uniqueId": "cf-1020B",
+          "name": "Div 2 B - Badge",
+          "url": "https://codeforces.com/contest/1020/problem/B",
+          "source": "CF",
+          "difficulty": "Very Easy",
+          "isStarred": false,
+          "tags": [
+            "Functional Graph"
+          ],
+          "category": "sample"
+        },
+        {
+          "uniqueId": "cf-1137D",
+          "name": "Cooperative Game",
+          "url": "https://codeforces.com/contest/1137/problem/D",
+          "source": "CF",
+          "difficulty": "Hard",
+          "isStarred": false,
+          "tags": [
+            "Functional Graph"
+          ],
+          "category": "sample_floyd"
+        },
+        {
+          "uniqueId": "usaco-764",
+          "name": "The Bovine Shuffle",
+          "url": "http://www.usaco.org/index.php?page=viewproblem2&cpid=764",
+          "source": "Silver",
+          "difficulty": "Easy",
+          "isStarred": false,
+          "tags": [
+            "Functional Graph"
+          ],
+          "category": "probs"
+        },
+        {
+          "uniqueId": "cses-1751",
+          "name": "Planets Cycles",
+          "url": "https://cses.fi/problemset/task/1751",
+          "source": "CSES",
+          "difficulty": "Easy",
+          "isStarred": true,
+          "tags": [
+            "Functional Graph"
+          ],
+          "category": "probs"
+        },
+        {
+          "uniqueId": "usaco-1230",
+          "name": "Visits",
+          "url": "http://usaco.org/index.php?page=viewproblem2&cpid=1230",
+          "source": "Silver",
+          "difficulty": "Normal",
+          "isStarred": false,
+          "tags": [
+            "SCC"
+          ],
+          "category": "probs"
+        },
+        {
+          "uniqueId": "usaco-284",
+          "name": "Luxury River Cruise",
+          "url": "http://usaco.org/index.php?page=viewproblem2&cpid=284",
+          "source": "Old Silver",
+          "difficulty": "Normal",
+          "isStarred": false,
+          "tags": [
+            "Functional Graph"
+          ],
+          "category": "probs"
+        },
+        {
+          "uniqueId": "IOI11_garden",
+          "name": "Tropical Garden",
+          "url": "https://oj.uz/problem/view/IOI11_garden",
+          "source": "IOI",
+          "difficulty": "Very Hard",
+          "isStarred": false,
+          "tags": [
+            "Functional Graph"
+          ],
+          "category": "probs"
+        }
+      ]
+    },
+    {
+      "module_id": "intro-bitwise",
+      "module_name": "Intro Bitwise",
+      "problems": [
+        {
+          "uniqueId": "cf-1556D",
+          "name": "Take a Guess",
+          "url": "https://codeforces.com/contest/1556/problem/D",
+          "source": "CF",
+          "difficulty": "Normal",
+          "isStarred": false,
+          "tags": [
+            "Bitwise"
+          ],
+          "category": "sample"
+        },
+        {
+          "uniqueId": "ac-XorSigmaProblem",
+          "name": "Xor Sigma Problem",
+          "url": "https://atcoder.jp/contests/abc365/tasks/abc365_e",
+          "source": "AC",
+          "difficulty": "Normal",
+          "isStarred": false,
+          "tags": [
+            "Bitwise",
+            "Prefix Sums"
+          ],
+          "category": "sample2"
+        },
+        {
+          "uniqueId": "cf-1338A",
+          "name": "Powered Addition",
+          "url": "https://codeforces.com/contest/1338/problem/A",
+          "source": "CF",
+          "difficulty": "Easy",
+          "isStarred": false,
+          "tags": [
+            "Bitwise",
+            "Greedy"
+          ],
+          "category": "probs"
+        },
+        {
+          "uniqueId": "cf-1872E",
+          "name": "Data Structures Fan",
+          "url": "https://codeforces.com/contest/1872/problem/E",
+          "source": "CF",
+          "difficulty": "Easy",
+          "isStarred": false,
+          "tags": [
+            "Bitwise"
+          ],
+          "category": "probs"
+        },
+        {
+          "uniqueId": "cf-1017D",
+          "name": "The Wu",
+          "url": "https://codeforces.com/contest/1017/problem/D",
+          "source": "CF",
+          "difficulty": "Easy",
+          "isStarred": false,
+          "tags": [
+            "Bitwise",
+            "Complete Search",
+            "Binary Search"
+          ],
+          "category": "probs"
+        },
+        {
+          "uniqueId": "ac-threedaysago",
+          "name": "Three Days Ago",
+          "url": "https://atcoder.jp/contests/abc295/tasks/abc295_d",
+          "source": "AC",
+          "difficulty": "Easy",
+          "isStarred": true,
+          "tags": [
+            "Bitwise"
+          ],
+          "category": "probs"
+        },
+        {
+          "uniqueId": "cf-1851F",
+          "name": "Lisa and the Martians",
+          "url": "https://codeforces.com/contest/1851/problem/F",
+          "source": "CF",
+          "difficulty": "Easy",
+          "isStarred": false,
+          "tags": [
+            "Bitwise",
+            "Sorting",
+            "Trie"
+          ],
+          "category": "probs"
+        },
+        {
+          "uniqueId": "usaco-1182",
+          "name": "Searching For Soulmates",
+          "url": "http://www.usaco.org/index.php?page=viewproblem2&cpid=1182",
+          "source": "Silver",
+          "difficulty": "Easy",
+          "isStarred": false,
+          "tags": [
+            "Bitwise",
+            "Complete Search"
+          ],
+          "category": "probs"
+        },
+        {
+          "uniqueId": "usaco-1327",
+          "name": "Field Day",
+          "url": "http://www.usaco.org/index.php?page=viewproblem2&cpid=1327",
+          "source": "Silver",
+          "difficulty": "Normal",
+          "isStarred": false,
+          "tags": [
+            "Bitwise",
+            "Graphs"
+          ],
+          "category": "probs"
+        },
+        {
+          "uniqueId": "cf-1732C1",
+          "name": "Sheikh (Easy version)",
+          "url": "https://codeforces.com/problemset/problem/1732/C1",
+          "source": "CF",
+          "difficulty": "Normal",
+          "isStarred": false,
+          "tags": [
+            "Bitwise",
+            "Prefix Sums",
+            "Binary Search"
+          ],
+          "category": "probs"
+        },
+        {
+          "uniqueId": "cf-1879D",
+          "name": "Sum of XOR Functions",
+          "url": "https://codeforces.com/contest/1879/problem/D",
+          "source": "CF",
+          "difficulty": "Normal",
+          "isStarred": false,
+          "tags": [
+            "Bitwise",
+            "Prefix Sums"
+          ],
+          "category": "probs"
+        },
+        {
+          "uniqueId": "cses-2185",
+          "name": "Prime Multiples",
+          "url": "https://cses.fi/problemset/task/2185",
+          "source": "CSES",
+          "difficulty": "Normal",
+          "isStarred": true,
+          "tags": [
+            "Bitwise",
+            "PIE"
+          ],
+          "category": "probs"
+        },
+        {
+          "uniqueId": "cf-1368D",
+          "name": "AND, OR, and square sum",
+          "url": "https://codeforces.com/contest/1368/problem/D",
+          "source": "CF",
+          "difficulty": "Normal",
+          "isStarred": false,
+          "tags": [
+            "Math",
+            "Greedy"
+          ],
+          "category": "probs"
+        },
+        {
+          "uniqueId": "usaco-1518",
+          "name": "Sequence Construction",
+          "url": "https://usaco.org/index.php?page=viewproblem2&cpid=1518",
+          "source": "Silver",
+          "difficulty": "Normal",
+          "isStarred": false,
+          "tags": [
+            "Bitwise"
+          ],
+          "category": "probs"
+        },
+        {
+          "uniqueId": "cf-1088D",
+          "name": "Ehab and another another xor problem",
+          "url": "https://codeforces.com/contest/1088/problem/D",
+          "source": "CF",
+          "difficulty": "Hard",
+          "isStarred": false,
+          "tags": [
+            "Math",
+            "Interactive"
+          ],
+          "category": "probs"
+        }
+      ]
+    },
+    {
+      "module_id": "silver-conclusion",
+      "module_name": "Conclusion",
+      "problems": [
+        {
+          "uniqueId": "cses-1650",
+          "name": "Range XOR Queries",
+          "url": "https://cses.fi/problemset/task/1650",
+          "source": "CSES",
+          "difficulty": "Easy",
+          "isStarred": false,
+          "tags": [
+            "Prefix Sums"
+          ],
+          "category": "problems"
+        },
+        {
+          "uniqueId": "cf-1359C",
+          "name": "Mixing Water",
+          "url": "https://codeforces.com/problemset/problem/1359/C",
+          "source": "CF",
+          "difficulty": "Easy",
+          "isStarred": false,
+          "tags": [
+            "Binary Search"
+          ],
+          "category": "problems"
+        },
+        {
+          "uniqueId": "ceoi-12-JobScheduling",
+          "name": "2012 - Job Scheduling",
+          "url": "https://oj.uz/problem/view/CEOI12_jobs",
+          "source": "CEOI",
+          "difficulty": "Easy",
+          "isStarred": false,
+          "tags": [
+            "Binary Search"
+          ],
+          "category": "problems"
+        },
+        {
+          "uniqueId": "cf-803D",
+          "name": "Magazine Ad",
+          "url": "https://codeforces.com/contest/803/problem/D",
+          "source": "CF",
+          "difficulty": "Easy",
+          "isStarred": false,
+          "tags": [
+            "Binary Search",
+            "Greedy",
+            "2P"
+          ],
+          "category": "problems"
+        },
+        {
+          "uniqueId": "cf-1077D",
+          "name": "Cutting Out",
+          "url": "https://codeforces.com/contest/1077/problem/D",
+          "source": "CF",
+          "difficulty": "Easy",
+          "isStarred": false,
+          "tags": [
+            "Binary Search"
+          ],
+          "category": "problems"
+        },
+        {
+          "uniqueId": "cf-2060E",
+          "name": "Graph Composition",
+          "url": "https://codeforces.com/contest/2060/problem/E",
+          "source": "CF",
+          "difficulty": "Easy",
+          "isStarred": false,
+          "tags": [
+            "Connected Components",
+            "DSU"
+          ],
+          "category": "problems"
+        },
+        {
+          "uniqueId": "cf-404C",
+          "name": "Restore Graph",
+          "url": "https://codeforces.com/contest/404/problem/C",
+          "source": "CF",
+          "difficulty": "Easy",
+          "isStarred": false,
+          "tags": [
+            "BFS"
+          ],
+          "category": "problems"
+        },
+        {
+          "uniqueId": "cf-1873E",
+          "name": " Building an Aquarium",
+          "url": "https://codeforces.com/contest/1873/problem/E",
+          "source": "CF",
+          "difficulty": "Easy",
+          "isStarred": false,
+          "tags": [
+            "Binary Search"
+          ],
+          "category": "problems"
+        },
+        {
+          "uniqueId": "cf-1223C",
+          "name": "Save the Nature",
+          "url": "https://codeforces.com/problemset/problem/1223/C",
+          "source": "CF",
+          "difficulty": "Normal",
+          "isStarred": false,
+          "tags": [
+            "Binary Search",
+            "Sorting"
+          ],
+          "category": "problems"
+        },
+        {
+          "uniqueId": "ac-pond",
+          "name": "Pond",
+          "url": "https://atcoder.jp/contests/abc203/tasks/abc203_d?lang=en",
+          "source": "AC",
+          "difficulty": "Normal",
+          "isStarred": false,
+          "tags": [
+            "Binary Search",
+            "Prefix Sums"
+          ],
+          "category": "problems"
+        },
+        {
+          "uniqueId": "ccc-firehose",
+          "name": "Firehose",
+          "url": "https://dmoj.ca/problem/ccc10s3",
+          "source": "CCC",
+          "difficulty": "Normal",
+          "isStarred": false,
+          "tags": [
+            "Binary Search"
+          ],
+          "category": "problems"
+        },
+        {
+          "uniqueId": "usaco-1255",
+          "name": "Circular Barn - The Game",
+          "url": "http://usaco.org/index.php?page=viewproblem2&cpid=1255",
+          "source": "Silver",
+          "difficulty": "Normal",
+          "isStarred": false,
+          "tags": [
+            "Game Theory",
+            "NT"
+          ],
+          "category": "problems"
+        },
+        {
+          "uniqueId": "usaco-419",
+          "name": "Sabotage",
+          "url": "http://usaco.org/index.php?page=viewproblem2&cpid=419",
+          "source": "Old Gold",
+          "difficulty": "Normal",
+          "isStarred": false,
+          "tags": [
+            "Binary Search",
+            "Prefix Sums"
+          ],
+          "category": "problems"
+        },
+        {
+          "uniqueId": "cf-1468D",
+          "name": "Firecrackers",
+          "url": "https://codeforces.com/contest/1468/problem/D",
+          "source": "CF",
+          "difficulty": "Normal",
+          "isStarred": false,
+          "tags": [
+            "Binary Search",
+            "Sorting"
+          ],
+          "category": "problems"
+        },
+        {
+          "uniqueId": "usaco-1112",
+          "name": "Just Green Enough",
+          "url": "http://www.usaco.org/index.php?page=viewproblem2&cpid=1112",
+          "source": "Silver",
+          "difficulty": "Normal",
+          "isStarred": false,
+          "tags": [
+            "Prefix Sums"
+          ],
+          "category": "problems"
+        },
+        {
+          "uniqueId": "cf-1792C",
+          "name": "Min Max Sort",
+          "url": "https://codeforces.com/contest/1792/problem/C",
+          "source": "CF",
+          "difficulty": "Normal",
+          "isStarred": false,
+          "tags": [
+            "Binary search",
+            "Two pointers"
+          ],
+          "category": "problems"
+        },
+        {
+          "uniqueId": "cf-51C",
+          "name": "Three Base Stations",
+          "url": "https://codeforces.com/contest/51/problem/C",
+          "source": "CF",
+          "difficulty": "Normal",
+          "isStarred": false,
+          "tags": [
+            "Binary Search, 2P"
+          ],
+          "category": "problems"
+        },
+        {
+          "uniqueId": "cf-1856C",
+          "name": "To Become Max",
+          "url": "https://codeforces.com/contest/1856/problem/C",
+          "source": "CF",
+          "difficulty": "Normal",
+          "isStarred": false,
+          "tags": [
+            "Binary Search"
+          ],
+          "category": "problems"
+        },
+        {
+          "uniqueId": "cf-1638D",
+          "name": "Big Brush",
+          "url": "https://codeforces.com/contest/1638/problem/D",
+          "source": "CF",
+          "difficulty": "Normal",
+          "isStarred": false,
+          "tags": [
+            "Ad Hoc",
+            "Greedy",
+            "DFS"
+          ],
+          "category": "problems"
+        },
+        {
+          "uniqueId": "cf-1620E",
+          "name": "Replace the Numbers",
+          "url": "https://codeforces.com/contest/1620/problem/E",
+          "source": "CF",
+          "difficulty": "Normal",
+          "isStarred": false,
+          "tags": [
+            "Sorting"
+          ],
+          "category": "problems"
+        },
+        {
+          "uniqueId": "cf-1775D",
+          "name": "Friendly Spiders",
+          "url": "https://codeforces.com/contest/1775/problem/D",
+          "source": "CF",
+          "difficulty": "Normal",
+          "isStarred": false,
+          "tags": [
+            "Number Theory",
+            "Graphs",
+            "BFS",
+            "Shortest Path"
+          ],
+          "category": "problems"
+        },
+        {
+          "uniqueId": "cf-1722E",
+          "name": "Counting Rectangles",
+          "url": "https://codeforces.com/problemset/problem/1722/E",
+          "source": "CF",
+          "difficulty": "Normal",
+          "isStarred": false,
+          "tags": [
+            "Prefix Sums"
+          ],
+          "category": "problems"
+        },
+        {
+          "uniqueId": "cf-1690G",
+          "name": "Count the Trains",
+          "url": "https://codeforces.com/problemset/problem/1690/G",
+          "source": "CF",
+          "difficulty": "Normal",
+          "isStarred": false,
+          "tags": [
+            "Sorted Set"
+          ],
+          "category": "problems"
+        },
+        {
+          "uniqueId": "cf-1108E2",
+          "name": "Array and Segments",
+          "url": "https://codeforces.com/contest/1108/problem/E2",
+          "source": "CF",
+          "difficulty": "Normal",
+          "isStarred": false,
+          "tags": [
+            "Sorted Set"
+          ],
+          "category": "problems"
+        },
+        {
+          "uniqueId": "cf-1622C",
+          "name": "Set Or Decrease",
+          "url": "https://codeforces.com/contest/1622/problem/C",
+          "source": "CF",
+          "difficulty": "Normal",
+          "isStarred": false,
+          "tags": [
+            "Binary Search",
+            "Prefix Sums"
+          ],
+          "category": "problems"
+        },
+        {
+          "uniqueId": "cf-2021C2",
+          "name": "Adjust The Presentation",
+          "url": "https://codeforces.com/problemset/problem/2021/C2",
+          "source": "CF",
+          "difficulty": "Normal",
+          "isStarred": false,
+          "tags": [
+            "Greedy"
+          ],
+          "category": "problems"
+        },
+        {
+          "uniqueId": "cf-2044G2",
+          "name": "Medium Demon Problem (hard version)",
+          "url": "https://codeforces.com/contest/2044/problem/G2",
+          "source": "CF",
+          "difficulty": "Normal",
+          "isStarred": false,
+          "tags": [
+            "Functional Graphs"
+          ],
+          "category": "problems"
+        },
+        {
+          "uniqueId": "cf-2044G1",
+          "name": "Medium Demon Problem (easy version)",
+          "url": "https://codeforces.com/contest/2044/problem/G1",
+          "source": "CF",
+          "difficulty": "Normal",
+          "isStarred": false,
+          "tags": [
+            "Functional Graphs"
+          ],
+          "category": "problems"
+        },
+        {
+          "uniqueId": "cf-2181M",
+          "name": "Medical Parity",
+          "url": "https://codeforces.com/contest/2181/problem/M",
+          "source": "CF",
+          "difficulty": "Normal",
+          "isStarred": false,
+          "tags": [
+            "Greedy",
+            "Prefix",
+            "Bitwise"
+          ],
+          "category": "problems"
+        },
+        {
+          "uniqueId": "cf-700B",
+          "name": "Connecting Universities",
+          "url": "https://codeforces.com/contest/700/problem/B",
+          "source": "CF",
+          "difficulty": "Hard",
+          "isStarred": false,
+          "tags": [
+            "DFS"
+          ],
+          "category": "problems"
+        },
+        {
+          "uniqueId": "cf-1288D",
+          "name": "Minimax Problem",
+          "url": "https://codeforces.com/contest/1288/problem/D",
+          "source": "CF",
+          "difficulty": "Hard",
+          "isStarred": false,
+          "tags": [
+            "Binary Search",
+            "Bitmasks"
+          ],
+          "category": "problems"
+        },
+        {
+          "uniqueId": "ac-fennecvssnuke",
+          "name": "Fennec VS. Snuke",
+          "url": "https://atcoder.jp/contests/arc078/tasks/arc078_b",
+          "source": "AC",
+          "difficulty": "Hard",
+          "isStarred": false,
+          "tags": [
+            "Trees",
+            "Game Theory"
+          ],
+          "category": "problems"
+        },
+        {
+          "uniqueId": "ceoi-10-AHugeTower",
+          "name": "2010 - A Huge Tower",
+          "url": "https://oj.uz/problem/view/CEOI10_tower",
+          "source": "CEOI",
+          "difficulty": "Hard",
+          "isStarred": false,
+          "tags": [
+            "2P",
+            "Sorting"
+          ],
+          "category": "problems"
+        },
+        {
+          "uniqueId": "cf-1744F",
+          "name": "MEX vs MED",
+          "url": "https://codeforces.com/contest/1744/problem/F",
+          "source": "CF",
+          "difficulty": "Hard",
+          "isStarred": false,
+          "tags": [
+            "2P",
+            "Greedy"
+          ],
+          "category": "problems"
+        },
+        {
+          "uniqueId": "cf-412D",
+          "name": "Giving Awards",
+          "url": "https://codeforces.com/contest/412/problem/D",
+          "source": "CF",
+          "difficulty": "Hard",
+          "isStarred": false,
+          "tags": [
+            "DFS"
+          ],
+          "category": "problems"
+        },
+        {
+          "uniqueId": "cf-2064D",
+          "name": "Eating",
+          "url": "https://codeforces.com/problemset/problem/2064/D",
+          "source": "CF",
+          "difficulty": "Hard",
+          "isStarred": false,
+          "tags": [
+            "2D Prefix Sums",
+            "Bitmasking",
+            "DP"
+          ],
+          "category": "problems"
+        },
+        {
+          "uniqueId": "other-13-dreaming",
+          "name": "2013 - Dreaming",
+          "url": "https://oj.uz/problem/view/IOI13_dreaming",
+          "source": "IOI",
+          "difficulty": "Hard",
+          "isStarred": false,
+          "tags": [
+            "Tree"
+          ],
+          "category": "problems"
+        },
+        {
+          "uniqueId": "usaco-1523",
+          "name": "OohMoo Milk",
+          "url": "https://usaco.org/index.php?page=viewproblem2&cpid=1523",
+          "source": "Gold",
+          "difficulty": "Hard",
+          "isStarred": false,
+          "tags": [
+            "Binary Search",
+            "Sorting"
+          ],
+          "category": "problems"
+        },
+        {
+          "uniqueId": "cf-1943C",
+          "name": "Tree Compass",
+          "url": "https://codeforces.com/contest/1943/problem/C",
+          "source": "CF",
+          "difficulty": "Very Hard",
+          "isStarred": false,
+          "tags": [
+            "Tree"
+          ],
+          "category": "problems"
+        },
+        {
+          "uniqueId": "cf-1428E",
+          "name": "Carrots for rabbits",
+          "url": "https://codeforces.com/contest/1428/problem/E",
+          "source": "CF",
+          "difficulty": "Very Hard",
+          "isStarred": false,
+          "tags": [
+            "Priority queue",
+            "math"
+          ],
+          "category": "problems"
+        }
+      ]
+    }
+  ]
+}
