@@ -1,11 +1,13 @@
 """
 OpenRouter API service for AI-powered reflections.
 Uses the best available model for generating problem reflections.
+Implements native fallback support using OpenRouter's models parameter.
 """
 
 import os
+from typing import List, Optional
+
 import httpx
-from typing import Optional
 from dotenv import load_dotenv
 
 # Load environment variables
@@ -14,20 +16,27 @@ load_dotenv()
 OPENROUTER_API_KEY = os.getenv("API_KEY")
 OPENROUTER_BASE_URL = "https://openrouter.ai/api/v1"
 
-# Best available models (in order of preference)
-PREFERRED_MODELS = [
+# Fallback models in order of preference
+# OpenRouter will automatically try the next model if the previous one fails
+FALLBACK_MODELS: List[str] = [
     "anthropic/claude-sonnet-4",  # Best for reasoning
-    "anthropic/claude-3.5-sonnet",
-    "openai/gpt-4o",
-    "openai/gpt-4o-mini",
-    "google/gemini-2.0-flash-001",
+    "anthropic/claude-3.5-sonnet",  # Great alternative
+    "openai/gpt-4o",  # Strong fallback
+    "openai/gpt-4o-mini",  # Cost-effective fallback
+    "google/gemini-2.0-flash-001",  # Fast and reliable
+    "google/gemini-flash-1.5",  # Another Google option
+    "meta-llama/llama-3.1-70b-instruct",  # Open source fallback
 ]
 
+# Route configuration for fallback behavior
+ROUTE_CONFIG = {
+    "order": "fallback",  # Use fallback ordering (try models in sequence)
+}
 
-async def get_available_model() -> str:
-    """Get the best available model from OpenRouter."""
-    # For now, use a reliable model
-    return "anthropic/claude-sonnet-4"
+
+def get_fallback_models() -> List[str]:
+    """Get the list of fallback models to use."""
+    return FALLBACK_MODELS.copy()
 
 
 async def generate_reflection(
@@ -45,7 +54,8 @@ async def generate_reflection(
 ) -> dict:
     """
     Generate AI-powered reflection for a problem.
-    
+    Uses OpenRouter's native fallback mechanism to try multiple models.
+
     Returns:
         dict with keys: pivot_sentence, tips, what_to_improve, master_approach, model_used, error
     """
@@ -91,7 +101,7 @@ async def generate_reflection(
 ## Problem Information:
 - **Name**: {problem_name}
 - **URL**: {problem_url}
-- **Topic/Pattern**: {topic.replace('_', ' ').title()}
+- **Topic/Pattern**: {topic.replace("_", " ").title()}
 - **Difficulty Rating**: {difficulty}/100
 - **User's Rating**: {user_rating}/100
 
@@ -118,9 +128,9 @@ Provide a reflection in the following JSON format (respond ONLY with valid JSON,
 Remember: Your response must be ONLY valid JSON, no additional text or markdown formatting."""
 
     try:
-        model = await get_available_model()
-        
-        async with httpx.AsyncClient(timeout=60.0) as client:
+        fallback_models = get_fallback_models()
+
+        async with httpx.AsyncClient(timeout=90.0) as client:
             response = await client.post(
                 f"{OPENROUTER_BASE_URL}/chat/completions",
                 headers={
@@ -130,22 +140,20 @@ Remember: Your response must be ONLY valid JSON, no additional text or markdown 
                     "X-Title": "MasterCP - The Circle of Inevitability",
                 },
                 json={
-                    "model": model,
+                    "models": fallback_models,  # Use models array for fallback support
+                    "route": "fallback",  # Explicitly set fallback routing
                     "messages": [
                         {
                             "role": "system",
-                            "content": "You are the Divine Oracle of The Circle of Inevitability, providing wisdom to competitive programmers. Always respond with valid JSON only."
+                            "content": "You are the Divine Oracle of The Circle of Inevitability, providing wisdom to competitive programmers. Always respond with valid JSON only.",
                         },
-                        {
-                            "role": "user",
-                            "content": prompt
-                        }
+                        {"role": "user", "content": prompt},
                     ],
                     "temperature": 0.7,
                     "max_tokens": 2000,
-                }
+                },
             )
-            
+
             if response.status_code != 200:
                 error_text = response.text
                 return {
@@ -154,15 +162,19 @@ Remember: Your response must be ONLY valid JSON, no additional text or markdown 
                     "tips": None,
                     "what_to_improve": None,
                     "master_approach": None,
-                    "model_used": model,
+                    "model_used": None,
                 }
-            
+
             data = response.json()
+
+            # Extract which model was actually used (OpenRouter returns this in the response)
+            model_used = data.get("model", fallback_models[0])
+
             content = data.get("choices", [{}])[0].get("message", {}).get("content", "")
-            
+
             # Parse the JSON response
             import json
-            
+
             # Clean up the response (remove markdown code blocks if present)
             content = content.strip()
             if content.startswith("```json"):
@@ -172,36 +184,44 @@ Remember: Your response must be ONLY valid JSON, no additional text or markdown 
             if content.endswith("```"):
                 content = content[:-3]
             content = content.strip()
-            
+
             try:
                 reflection_data = json.loads(content)
-                
+
                 # Helper function to convert lists to strings
                 def to_string(value):
                     if isinstance(value, list):
                         return "\n• " + "\n• ".join(str(item) for item in value)
                     return value
-                
+
                 return {
                     "pivot_sentence": to_string(reflection_data.get("pivot_sentence")),
                     "tips": to_string(reflection_data.get("tips")),
-                    "what_to_improve": to_string(reflection_data.get("what_to_improve")),
-                    "master_approach": to_string(reflection_data.get("master_approach")),
-                    "model_used": model,
-                    "full_response": json.dumps(reflection_data),  # Serialize to JSON string
+                    "what_to_improve": to_string(
+                        reflection_data.get("what_to_improve")
+                    ),
+                    "master_approach": to_string(
+                        reflection_data.get("master_approach")
+                    ),
+                    "model_used": model_used,
+                    "full_response": json.dumps(
+                        reflection_data
+                    ),  # Serialize to JSON string
                     "error": None,
                 }
             except json.JSONDecodeError as e:
                 return {
                     "error": f"Failed to parse AI response: {str(e)}",
-                    "pivot_sentence": content[:500] if content else None,  # Store raw response as fallback
+                    "pivot_sentence": content[:500]
+                    if content
+                    else None,  # Store raw response as fallback
                     "tips": None,
                     "what_to_improve": None,
                     "master_approach": None,
-                    "model_used": model,
+                    "model_used": model_used,
                     "full_response": {"raw": content},
                 }
-                
+
     except httpx.TimeoutException:
         return {
             "error": "Request timed out. Please try again.",
