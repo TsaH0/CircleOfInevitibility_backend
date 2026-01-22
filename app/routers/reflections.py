@@ -31,18 +31,22 @@ class ReflectionResponse(BaseModel):
     topic: str
     difficulty: int
     solved: bool
+    partial: bool = False
     time_taken_seconds: Optional[int]
-    
+
+    # User's approach recorded during contest
+    user_approach: Optional[str]
+
     # Editorial provided by user
     editorial_text: Optional[str]
     editorial_url: Optional[str]
-    
+
     # AI-generated reflection
     pivot_sentence: Optional[str]
     tips: Optional[str]
     what_to_improve: Optional[str]
     master_approach: Optional[str]
-    
+
     # Metadata
     model_used: Optional[str]
     generated_at: Optional[datetime]
@@ -157,9 +161,11 @@ async def generate_problem_reflection(
         topic=contest_problem.topic,
         difficulty=contest_problem.difficulty,
         solved=(contest_problem.status == SubmissionStatus.SOLVED),
+        partial=(contest_problem.status == SubmissionStatus.PARTIAL),
         time_taken_seconds=contest_problem.time_taken_seconds,
         editorial_text=reflection.editorial_text,
         editorial_url=reflection.editorial_url,
+        user_approach=contest_problem.user_approach,
         user_rating=contest.rating_at_start,
     )
     
@@ -223,9 +229,11 @@ async def generate_all_reflections(
             topic=problem.topic,
             difficulty=problem.difficulty,
             solved=(problem.status == SubmissionStatus.SOLVED),
+            partial=(problem.status == SubmissionStatus.PARTIAL),
             time_taken_seconds=problem.time_taken_seconds,
             editorial_text=reflection.editorial_text,
             editorial_url=reflection.editorial_url,
+            user_approach=problem.user_approach,
             user_rating=contest.rating_at_start,
         )
         
@@ -285,6 +293,7 @@ async def get_contest_reflections(
             "difficulty": problem.difficulty,
             "status": problem.status.value,
             "time_taken_seconds": problem.time_taken_seconds,
+            "user_approach": problem.user_approach,
             "has_reflection": False,
             "reflection": None,
         }
@@ -358,6 +367,7 @@ async def get_problem_reflection(
             "difficulty": contest_problem.difficulty,
             "status": contest_problem.status.value,
             "time_taken_seconds": contest_problem.time_taken_seconds,
+            "user_approach": contest_problem.user_approach,
         },
         "reflection": {
             "id": reflection.id if reflection else None,
@@ -384,7 +394,9 @@ def _build_reflection_response(problem: ContestProblem, reflection: ProblemRefle
         "topic": problem.topic,
         "difficulty": problem.difficulty,
         "solved": problem.status == SubmissionStatus.SOLVED,
+        "partial": problem.status == SubmissionStatus.PARTIAL,
         "time_taken_seconds": problem.time_taken_seconds,
+        "user_approach": problem.user_approach,
         "editorial_text": reflection.editorial_text,
         "editorial_url": reflection.editorial_url,
         "pivot_sentence": reflection.pivot_sentence,

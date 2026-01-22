@@ -129,7 +129,9 @@ def submit_problem(
             contest_id=contest_id,
             problem_id=submission.problem_id,
             solved=submission.solved,
+            partial=submission.partial,
             time_taken_seconds=submission.time_taken_seconds,
+            user_approach=submission.user_approach,
         )
     except ValueError as e:
         raise HTTPException(
@@ -166,7 +168,9 @@ def submit_all_problems(
                 contest_id=contest_id,
                 problem_id=submission.problem_id,
                 solved=submission.solved,
+                partial=submission.partial,
                 time_taken_seconds=submission.time_taken_seconds,
+                user_approach=submission.user_approach,
             )
             results.append(SubmissionResponse(
                 contest_id=contest_id,

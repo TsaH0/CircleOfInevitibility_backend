@@ -36,9 +36,11 @@ async def generate_reflection(
     topic: str,
     difficulty: int,
     solved: bool,
-    time_taken_seconds: Optional[int],
+    partial: bool = False,
+    time_taken_seconds: Optional[int] = None,
     editorial_text: Optional[str] = None,
     editorial_url: Optional[str] = None,
+    user_approach: Optional[str] = None,
     user_rating: int = 20,
 ) -> dict:
     """
@@ -71,8 +73,19 @@ async def generate_reflection(
     elif editorial_url:
         editorial_section = f"\n\n## Editorial URL: {editorial_url}\n(Please consider the typical solution approach for this type of problem)"
 
-    outcome = "SOLVED" if solved else "NOT SOLVED"
-    
+    # Build user approach section
+    approach_section = ""
+    if user_approach:
+        approach_section = f"\n\n## User's Approach During Contest:\n{user_approach}"
+
+    # Determine outcome
+    if solved:
+        outcome = "SOLVED"
+    elif partial:
+        outcome = "PARTIALLY SOLVED (had some ideas but couldn't fully solve)"
+    else:
+        outcome = "NOT SOLVED"
+
     prompt = f"""You are the Divine Oracle of "The Circle of Inevitability", the highest-level competitive programming wisdom system. Analyze this problem attempt and provide deep insight.
 
 ## Problem Information:
@@ -85,6 +98,7 @@ async def generate_reflection(
 ## Attempt Result:
 - **Outcome**: {outcome}
 - **Time Taken**: {time_str}
+{approach_section}
 {editorial_section}
 
 ---
@@ -93,12 +107,12 @@ Provide a reflection in the following JSON format (respond ONLY with valid JSON,
 
 {{
     "pivot_sentence": "The single most important insight that unlocks this problem. This should be a concise, memorable statement that captures the key algorithmic or logical breakthrough needed.",
-    
+
     "tips": "3-5 practical tips for tackling similar problems in the future. Focus on pattern recognition, common pitfalls to avoid, and time management strategies.",
-    
-    "what_to_improve": "Based on the outcome ({'solved' if solved else 'not solved'}) and time taken, what specific areas should be improved? Be constructive and specific.",
-    
-    "master_approach": "Describe how a Sequence 0 Beyonder (The Fool - master of all algorithms) would approach this problem from the very first read. Include the thought process, the key observations they would make immediately, and the optimal strategy they would employ. Write this as if teaching an apprentice."
+
+    "what_to_improve": "Based on the outcome ({outcome.lower()}) and time taken{", and the user's approach" if user_approach else ""}, what specific areas should be improved? {"Analyze where the user's thinking went wrong or was incomplete, and explain the correct way to think about this problem. Be specific about what was missing from their approach." if user_approach else "Be constructive and specific."}",
+
+    "master_approach": "Describe how a Sequence 0 Beyonder (The Fool - master of all algorithms) would approach this problem from the very first read. Include the thought process, the key observations they would make immediately, and the optimal strategy they would employ. {"Compare this to the user's approach and highlight the key differences in thinking." if user_approach else "Write this as if teaching an apprentice."}"
 }}
 
 Remember: Your response must be ONLY valid JSON, no additional text or markdown formatting."""

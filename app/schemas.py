@@ -21,6 +21,7 @@ class ContestStatusEnum(str, Enum):
 class SubmissionStatusEnum(str, Enum):
     PENDING = "pending"
     SOLVED = "solved"
+    PARTIAL = "partial"  # Partially solved - counts as failed for rating
     FAILED = "failed"
     SKIPPED = "skipped"
 
@@ -105,6 +106,7 @@ class ContestProblemResponse(BaseModel):
     submitted_at: Optional[datetime]
     time_taken_seconds: Optional[int]
     attempts: int
+    user_approach: Optional[str] = None
 
     model_config = ConfigDict(from_attributes=True)
 
@@ -137,7 +139,9 @@ class ContestDetailResponse(ContestResponse):
 class ProblemSubmission(BaseModel):
     problem_id: str
     solved: bool
+    partial: bool = False  # True if partially solved
     time_taken_seconds: Optional[int] = None
+    user_approach: Optional[str] = None  # User's approach to the problem
 
 
 class ContestSubmission(BaseModel):

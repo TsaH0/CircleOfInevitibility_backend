@@ -48,6 +48,7 @@ class SubmissionStatus(enum.Enum):
 
     PENDING = "pending"
     SOLVED = "solved"
+    PARTIAL = "partial"  # Partially solved - counts as failed for rating
     FAILED = "failed"
     SKIPPED = "skipped"
 
@@ -238,6 +239,9 @@ class ContestProblem(Base):
 
     # Attempts
     attempts = Column(Integer, default=0)
+
+    # User's approach (recorded during contest for AI reflection)
+    user_approach = Column(Text, nullable=True)
 
     # Relationships
     contest = relationship("Contest", back_populates="problems")

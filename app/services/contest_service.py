@@ -178,7 +178,9 @@ class ContestService:
         contest_id: int,
         problem_id: str,
         solved: bool,
+        partial: bool = False,
         time_taken_seconds: Optional[int] = None,
+        user_approach: Optional[str] = None,
     ) -> ContestProblem:
         """
         Submit a solution for a problem.
@@ -188,7 +190,9 @@ class ContestService:
             contest_id: Contest ID
             problem_id: Problem ID
             solved: Whether the problem was solved
+            partial: Whether the problem was partially solved (counts as failed)
             time_taken_seconds: Time taken (optional, calculated from start if not provided)
+            user_approach: User's approach/thought process for the problem
 
         Returns:
             Updated ContestProblem
@@ -229,18 +233,24 @@ class ContestService:
             delta = now - contest_problem.started_at
             contest_problem.time_taken_seconds = int(delta.total_seconds())
 
+        # Store user's approach
+        if user_approach:
+            contest_problem.user_approach = user_approach
+
         # Update status
         if solved:
             contest_problem.status = SubmissionStatus.SOLVED
+        elif partial:
+            contest_problem.status = SubmissionStatus.PARTIAL
         else:
             contest_problem.status = SubmissionStatus.FAILED
 
-        # Update problem history
+        # Update problem history (partial counts as not solved)
         self._update_problem_history(
             db,
             contest.user_id,
             problem_id,
-            solved,
+            solved,  # Only full solves count
             contest_problem.time_taken_seconds,
         )
 
@@ -328,6 +338,7 @@ class ContestService:
             raise ValueError(f"Contest {contest_id} is not active")
 
         # Mark pending/skipped problems as failed
+        # Note: PARTIAL problems are treated as failed for rating purposes
         for problem in contest.problems:
             if problem.status in [SubmissionStatus.PENDING, SubmissionStatus.SKIPPED]:
                 problem.status = SubmissionStatus.FAILED

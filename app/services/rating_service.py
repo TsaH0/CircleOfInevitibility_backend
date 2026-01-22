@@ -43,9 +43,9 @@ class RatingService:
         user = contest.user
         problems = contest.problems
 
-        # Count solved and failed
+        # Count solved and failed (PARTIAL counts as failed)
         solved_problems = [p for p in problems if p.status == SubmissionStatus.SOLVED]
-        failed_problems = [p for p in problems if p.status == SubmissionStatus.FAILED]
+        failed_problems = [p for p in problems if p.status in [SubmissionStatus.FAILED, SubmissionStatus.PARTIAL]]
 
         all_solved = len(solved_problems) == len(problems)
         any_failed = len(failed_problems) > 0
