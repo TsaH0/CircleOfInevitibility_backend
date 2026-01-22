@@ -90,6 +90,7 @@ class ContestCreate(BaseModel):
     num_problems: int = Field(default=5, ge=3, le=10)
     time_limit_minutes: int = Field(default=120, ge=30, le=300)
     include_weak_topics: bool = Field(default=True)
+    target_difficulty: Optional[int] = Field(default=None, ge=0, le=100, description="Custom target difficulty. If not provided, uses user rating + 10.")
 
 
 class ContestProblemResponse(BaseModel):

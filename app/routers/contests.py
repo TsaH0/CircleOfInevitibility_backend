@@ -44,6 +44,7 @@ def start_contest(
             num_problems=contest_config.num_problems,
             time_limit_minutes=contest_config.time_limit_minutes,
             include_weak_topics=contest_config.include_weak_topics,
+            target_difficulty=contest_config.target_difficulty,
         )
     except ValueError as e:
         raise HTTPException(

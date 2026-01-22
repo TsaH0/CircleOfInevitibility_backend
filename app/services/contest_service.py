@@ -29,6 +29,7 @@ class ContestService:
         num_problems: int = 5,
         time_limit_minutes: int = 120,
         include_weak_topics: bool = True,
+        target_difficulty: Optional[int] = None,
     ) -> Contest:
         """
         Create a new contest for a user.
@@ -39,6 +40,7 @@ class ContestService:
             num_problems: Number of problems (3-10)
             time_limit_minutes: Time limit in minutes
             include_weak_topics: Whether to include weak topic problems
+            target_difficulty: Custom target difficulty (optional, defaults to user.rating + 10)
 
         Returns:
             Created Contest object
@@ -57,8 +59,11 @@ class ContestService:
         if active_contest:
             raise ValueError(f"User already has an active contest: {active_contest.id}")
 
-        # Calculate target difficulty
-        target_difficulty = user.rating + 10
+        # Calculate target difficulty - use provided value or default to user.rating + 10
+        if target_difficulty is not None:
+            final_target_difficulty = target_difficulty
+        else:
+            final_target_difficulty = user.rating + 10
 
         # Get user's weak topics
         weak_topics = []
@@ -71,7 +76,7 @@ class ContestService:
 
         # Select problems
         selected = self.problem_service.select_problems_for_contest(
-            target_difficulty=target_difficulty,
+            target_difficulty=final_target_difficulty,
             num_problems=num_problems,
             weak_topics=weak_topics,
             excluded_problem_ids=excluded_ids,
@@ -89,7 +94,7 @@ class ContestService:
             status=ContestStatus.ACTIVE,
             rating_at_start=user.rating,
             num_problems=num_problems,
-            target_difficulty=target_difficulty,
+            target_difficulty=final_target_difficulty,
             time_limit_minutes=time_limit_minutes,
         )
         db.add(contest)

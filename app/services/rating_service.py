@@ -19,7 +19,7 @@ class RatingService:
     # Rating change constants
     RATING_INCREASE = 10  # Rating increase for solving all problems
     RATING_DECREASE_PER_FAIL = 5  # Rating decrease per failed problem
-    WEAK_TOPIC_THRESHOLD = 2  # Consecutive failures to mark as weak
+    WEAK_TOPIC_THRESHOLD = 1  # Failures needed to mark as weak (1 = immediate)
 
     # Weak topic progression
     WEAK_TOPIC_SOLVES_TO_ADVANCE = 2  # Consecutive solves to increase level
@@ -192,31 +192,26 @@ class RatingService:
             result["topic_changes"][topic] = result["topic_changes"].get(topic, 0) + 5
         else:
             # Check if this topic should become weak
-            # Calculate failure rate for this topic
-            if topic_rating.problems_attempted >= 2:
-                failure_rate = 1 - (topic_rating.problems_solved / topic_rating.problems_attempted)
+            # Create weak topic immediately on first failure
+            existing_weak = db.query(WeakTopic).filter(
+                WeakTopic.user_id == user.id,
+                WeakTopic.topic == topic,
+                WeakTopic.is_active == True,
+            ).first()
 
-                if failure_rate >= 0.5:  # 50% or more failures
-                    # Check if already a weak topic
-                    existing_weak = db.query(WeakTopic).filter(
-                        WeakTopic.user_id == user.id,
-                        WeakTopic.topic == topic,
-                        WeakTopic.is_active == True,
-                    ).first()
-
-                    if not existing_weak:
-                        # Create new weak topic
-                        weak_topic = WeakTopic(
-                            user_id=user.id,
-                            topic=topic,
-                            current_level=max(10, user.rating - 20),  # Start lower
-                            target_level=user.rating + 10,
-                            consecutive_solves=0,
-                            total_attempts=0,
-                            total_failures=0,
-                        )
-                        db.add(weak_topic)
-                        result["new_weak_topics"].append(topic)
+            if not existing_weak:
+                # Create new weak topic immediately
+                weak_topic = WeakTopic(
+                    user_id=user.id,
+                    topic=topic,
+                    current_level=max(10, user.rating - 20),  # Start lower
+                    target_level=user.rating + 10,
+                    consecutive_solves=0,
+                    total_attempts=0,
+                    total_failures=1,  # Already failed once
+                )
+                db.add(weak_topic)
+                result["new_weak_topics"].append(topic)
 
             # Small rating decrease for topic
             topic_rating.rating = max(topic_rating.rating - 3, 100)
