@@ -19,6 +19,7 @@ OPENROUTER_BASE_URL = "https://openrouter.ai/api/v1"
 # Fallback models in order of preference
 # OpenRouter will automatically try the next model if the previous one fails
 FALLBACK_MODELS: List[str] = [
+    "liquid/lfm-2.5-1.2b-thinking:free",  # Free thinking model (primary)
     "anthropic/claude-sonnet-4",  # Best for reasoning
     "anthropic/claude-3.5-sonnet",  # Great alternative
     "openai/gpt-4o",  # Strong fallback
