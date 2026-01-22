@@ -16,10 +16,16 @@ load_dotenv()
 OPENROUTER_API_KEY = os.getenv("API_KEY")
 OPENROUTER_BASE_URL = "https://openrouter.ai/api/v1"
 
-# Fallback models in order of preference
-# OpenRouter will automatically try the next model if the previous one fails
-FALLBACK_MODELS: List[str] = [
+# Free models - no credits required (used by default)
+FREE_MODELS: List[str] = [
     "liquid/lfm-2.5-1.2b-thinking:free",  # Free thinking model (primary)
+    "google/gemma-3-1b-it:free",  # Free Gemma model
+    "meta-llama/llama-3.2-3b-instruct:free",  # Free Llama model
+    "qwen/qwen3-0.6b:free",  # Free Qwen model
+]
+
+# Paid models - requires credits (used as fallback if free models fail)
+PAID_MODELS: List[str] = [
     "anthropic/claude-sonnet-4",  # Best for reasoning
     "anthropic/claude-3.5-sonnet",  # Great alternative
     "openai/gpt-4o",  # Strong fallback
@@ -29,15 +35,27 @@ FALLBACK_MODELS: List[str] = [
     "meta-llama/llama-3.1-70b-instruct",  # Open source fallback
 ]
 
-# Route configuration for fallback behavior
-ROUTE_CONFIG = {
-    "order": "fallback",  # Use fallback ordering (try models in sequence)
-}
+# Default: use only free models to avoid credit issues
+# Set to True to include paid models as fallback
+USE_PAID_FALLBACK = False
 
 
-def get_fallback_models() -> List[str]:
-    """Get the list of fallback models to use."""
-    return FALLBACK_MODELS.copy()
+def get_fallback_models(include_paid: bool = None) -> List[str]:
+    """
+    Get the list of fallback models to use.
+
+    Args:
+        include_paid: Whether to include paid models. If None, uses USE_PAID_FALLBACK setting.
+
+    Returns:
+        List of model identifiers to try in order.
+    """
+    if include_paid is None:
+        include_paid = USE_PAID_FALLBACK
+
+    if include_paid:
+        return FREE_MODELS + PAID_MODELS
+    return FREE_MODELS.copy()
 
 
 async def generate_reflection(
