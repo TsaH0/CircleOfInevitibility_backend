@@ -17,22 +17,19 @@ OPENROUTER_API_KEY = os.getenv("API_KEY")
 OPENROUTER_BASE_URL = "https://openrouter.ai/api/v1"
 
 # Free models - no credits required (used by default)
+# OpenRouter allows max 3 models in fallback array
 FREE_MODELS: List[str] = [
     "liquid/lfm-2.5-1.2b-thinking:free",  # Free thinking model (primary)
     "google/gemma-3-1b-it:free",  # Free Gemma model
     "meta-llama/llama-3.2-3b-instruct:free",  # Free Llama model
-    "qwen/qwen3-0.6b:free",  # Free Qwen model
 ]
 
 # Paid models - requires credits (used as fallback if free models fail)
+# OpenRouter allows max 3 models in fallback array
 PAID_MODELS: List[str] = [
     "anthropic/claude-sonnet-4",  # Best for reasoning
-    "anthropic/claude-3.5-sonnet",  # Great alternative
-    "openai/gpt-4o",  # Strong fallback
     "openai/gpt-4o-mini",  # Cost-effective fallback
     "google/gemini-2.0-flash-001",  # Fast and reliable
-    "google/gemini-flash-1.5",  # Another Google option
-    "meta-llama/llama-3.1-70b-instruct",  # Open source fallback
 ]
 
 # Default: use only free models to avoid credit issues
