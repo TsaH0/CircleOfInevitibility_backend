@@ -1,6 +1,6 @@
 """
 Test script for the reflection service.
-Tests Groq as primary and OpenRouter as fallback.
+Tests Gemini as primary, Groq as backup, and OpenRouter as last fallback.
 """
 
 import asyncio
@@ -12,13 +12,17 @@ from dotenv import load_dotenv
 load_dotenv()
 
 # Check API keys
+gemini_key = os.getenv("GEMINI_API_KEY")
 groq_key = os.getenv("GROQ_API_KEY")
 openrouter_key = os.getenv("API_KEY")
 
 print("=" * 60)
 print("API Key Status:")
-print(f"  GROQ_API_KEY: {'✓ Set' if groq_key else '✗ Not set'}")
-print(f"  API_KEY (OpenRouter): {'✓ Set' if openrouter_key else '✗ Not set'}")
+print(f"  GEMINI_API_KEY: {'✓ Set' if gemini_key else '✗ Not set'} (Primary)")
+print(f"  GROQ_API_KEY: {'✓ Set' if groq_key else '✗ Not set'} (Backup)")
+print(
+    f"  API_KEY (OpenRouter): {'✓ Set' if openrouter_key else '✗ Not set'} (Last Fallback)"
+)
 print("=" * 60)
 
 
@@ -97,9 +101,9 @@ async def test_reflection():
 
 
 if __name__ == "__main__":
-    if not groq_key and not openrouter_key:
+    if not gemini_key and not groq_key and not openrouter_key:
         print("\n❌ No API keys configured!")
-        print("Please set GROQ_API_KEY or API_KEY in your .env file")
+        print("Please set GEMINI_API_KEY, GROQ_API_KEY, or API_KEY in your .env file")
         exit(1)
 
     result = asyncio.run(test_reflection())
